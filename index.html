@@ -1,6 +1,6 @@
 <!--
 =======================================================
-jbarbush.com — Deployment Instructions
+jbarbush.com, Deployment Instructions
 =======================================================
 
 TO PUBLISH AS jbarbush.com:
@@ -17,7 +17,7 @@ TO PUBLISH AS jbarbush.com:
 3. IF USING NAMECHEAP / cPanel:
    - Go to File Manager → public_html
    - Upload index.html
-   - Done — visit jbarbush.com to verify
+   - Done, visit jbarbush.com to verify
 
 4. IF USING NETLIFY (easiest, free):
    - Go to netlify.com → "Add new site" → "Deploy manually"
@@ -30,7 +30,7 @@ TO PUBLISH AS jbarbush.com:
 6. MAKING COPY EDITS before publishing:
    - Open index.html in any text editor (TextEdit on Mac, Notepad on PC)
    - Use Cmd+F (Mac) or Ctrl+F (PC) to find text you want to change
-   - Edit the text between the HTML tags — don't change the tags themselves
+   - Edit the text between the HTML tags, don't change the tags themselves
    - Example: find "I stopped arguing with the mirror." and retype it
    - Save the file, re-upload if already live
 
@@ -121,7 +121,7 @@ Questions: j@castiron.la
   --white:   #f5f5f5;
   --orange:  #e8470a;
   --orange2: #c03d08;
-  --mid:     #888;
+  --mid:     #aaaaaa;
   --muted:   #666;
   --cond: 'Barlow Condensed', sans-serif;
   --body: 'Barlow', sans-serif;
@@ -136,8 +136,8 @@ body {
   background: var(--black);
   color: var(--white);
   font-family: var(--body);
-  font-size: 17px;
-  line-height: 1.65;
+  font-size: 18px;
+  line-height: 1.7;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -183,7 +183,7 @@ nav {
 }
 .announce-bar span {
   font-family: var(--cond); font-size: 13px; font-weight: 400;
-  letter-spacing: 0.06em; color: rgba(255,255,255,0.45);
+  letter-spacing: 0.06em; color: rgba(255,255,255,0.65);
 }
 .badge-dot { color: rgba(255,255,255,0.2); }
 
@@ -212,7 +212,7 @@ h1 em { color: var(--orange); font-style: normal; display: block; }
   font-weight: 400; letter-spacing: 0.06em; text-transform: uppercase;
   color: var(--mid); margin-bottom: 32px; line-height: 1.3;
 }
-.hero-bio { font-size: 18px; line-height: 1.9; color: rgba(255,255,255,0.75); margin-bottom: 36px; }
+.hero-bio { font-size: 18px; line-height: 1.9; color: rgba(255,255,255,0.85); margin-bottom: 36px; }
 .hero-bio p { margin-bottom: 14px; }
 .hero-bio strong { color: var(--white); font-weight: 500; }
 .hero-pull {
@@ -272,7 +272,7 @@ h2.sh {
   line-height: 1.0; letter-spacing: -0.01em; text-transform: uppercase;
   color: var(--white); margin-bottom: 16px;
 }
-.section-sub { font-size: 18px; color: rgba(255,255,255,0.6); max-width: 560px; line-height: 1.75; margin-bottom: 56px; }
+.section-sub { font-size: 18px; color: rgba(255,255,255,0.72); max-width: 560px; line-height: 1.75; margin-bottom: 56px; }
 .pull-quote {
   border-left: 3px solid var(--orange); padding: 20px 24px; margin: 48px 0;
   background: rgba(232,71,10,0.06);
@@ -301,7 +301,7 @@ h2.sh {
   font-family: var(--cond); font-size: 22px; font-weight: 700;
   letter-spacing: 0.04em; text-transform: uppercase; color: var(--white); margin-bottom: 12px;
 }
-.thinking-card p { font-size: 17px; color: rgba(255,255,255,0.82); line-height: 1.75; }
+.thinking-card p { font-size: 17px; color: rgba(255,255,255,0.90); line-height: 1.75; }
 
 /* ---- STAGE ---- */
 .stage-wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
@@ -373,7 +373,7 @@ h2.sh {
 }
 .w-client {
   font-family: var(--cond); font-size: 13px; font-weight: 500;
-  letter-spacing: 0.08em; text-transform: uppercase; color: rgba(255,255,255,0.45);
+  letter-spacing: 0.08em; text-transform: uppercase; color: rgba(255,255,255,0.65);
 }
 .w-arrow {
   position: absolute; top: 20px; right: 20px; z-index: 3;
@@ -392,7 +392,7 @@ h2.sh {
 }
 .award-group:hover { border-top-color: var(--orange); }
 .award-show {
-  font-family: var(--cond); font-size: 13px; font-weight: 700;
+  font-family: var(--cond); font-size: 15px; font-weight: 700;
   letter-spacing: 0.14em; text-transform: uppercase; color: var(--orange); margin-bottom: 16px;
   display: flex; align-items: center; gap: 10px;
 }
@@ -482,10 +482,10 @@ footer {
   flex-wrap: wrap; gap: 12px;
   border-top: 1px solid rgba(255,255,255,0.06);
 }
-.footer-left { font-family: var(--cond); font-size: 13px; letter-spacing: 0.06em; color: rgba(255,255,255,0.3); }
-.footer-left a { color: rgba(255,255,255,0.35); transition: color 0.2s; }
+.footer-left { font-family: var(--cond); font-size: 14px; letter-spacing: 0.06em; color: rgba(255,255,255,0.55); }
+.footer-left a { color: rgba(255,255,255,0.6); transition: color 0.2s; }
 .footer-left a:hover { color: var(--white); }
-.footer-right { font-family: var(--cond); font-size: 12px; letter-spacing: 0.08em; color: rgba(255,255,255,0.2); }
+.footer-right { font-family: var(--cond); font-size: 14px; letter-spacing: 0.08em; color: rgba(255,255,255,0.45); }
 
 /* ---- DIVIDER ---- */
 .divider { height: 1px; background: rgba(255,255,255,0.06); }
@@ -500,7 +500,7 @@ footer {
 .ip-label { font-family: var(--cond); font-size: 14px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.5); line-height: 1.5; }
 
 /* rec strip label */
-.rec-label { font-family: var(--cond); font-size: 16px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.85); margin-bottom: 24px; display: block; }
+.rec-label { font-family: var(--cond); font-size: 20px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.95); margin-bottom: 24px; display: block; }
 
 /* responsive */
 @media (max-width: 900px) {
@@ -514,19 +514,28 @@ footer {
   .writing-grid { grid-template-columns: 1fr; gap: 20px; }
   .ip-bar { grid-template-columns: 1fr; }
   .awards-grid { grid-template-columns: 1fr; }
-  .legal-grid { grid-template-columns: 1fr; }
   .recs-grid { grid-template-columns: 1fr; }
   .nav-links li:not(:last-child) { display: none; }
   h1 { font-size: clamp(60px, 18vw, 100px); }
 }
 
-.legal-grid { grid-template-columns: 1fr 1fr; }
 .footer-nav-link {
   font-family: var(--cond); font-size: 14px; font-weight: 600;
   letter-spacing: 0.1em; text-transform: uppercase;
-  color: rgba(255,255,255,0.45); transition: color 0.2s;
+  color: rgba(255,255,255,0.65); transition: color 0.2s;
 }
 .footer-nav-link:hover { color: var(--white); }
+
+/* ADA touch targets */
+.btn, .nav-links a, .footer-nav-link, .work-card {
+  min-height: 44px;
+}
+.btn { display: inline-flex; align-items: center; }
+a:focus-visible {
+  outline: 3px solid var(--orange);
+  outline-offset: 3px;
+}
+
 @media (prefers-reduced-motion: reduce) {
   * { animation: none !important; transition-duration: 0.01ms !important; }
 }
@@ -578,9 +587,10 @@ h1             { animation: fu 0.5s ease both 0.2s; }
       <p class="hero-role">Co-Founder, <a href="https://www.castiron.la" style="color:var(--orange);text-decoration:none;" target="_blank" rel="noopener noreferrer">Cast Iron LA</a> &nbsp;·&nbsp; Creator, <a href="https://www.castiron.la" style="color:var(--orange);text-decoration:none;" target="_blank" rel="noopener noreferrer">Stage30™</a></p>
 
       <div class="hero-bio">
-        <p>Twenty-five years inside the biggest agencies. Most of that time I cared about making the client successful enough to fund the next round of better work. That was the honest incentive. I didn't hide it from myself. I just didn't say it out loud.</p>
-        <p>Then I opened my own agency with <a href="https://www.luisramirez.org" target="_blank" rel="noopener" style="color:var(--orange);">Luis Ramirez</a>. The client's problem became an actual problem I thought about on Saturdays. The incentives got clean. The work got better.</p>
-        <p><a href="https://www.castiron.la" target="_blank" rel="noopener" style="color:var(--orange);">Cast Iron LA</a> is that place. <a href="https://www.castiron.la" target="_blank" rel="noopener" style="color:var(--orange);">Stage30™</a> is what we built when we went looking for why brands disappear in AI search.</p>
+        <p>Twenty-five years inside the biggest agencies. Most of that time I only cared about one thing: make the client successful enough to fund the next round of better work. That was the honest incentive. I didn't hide it from myself. I just didn't say it out loud.</p>
+        <p>Then I started my own agency with <a href="https://www.luisramirez.org" target="_blank" rel="noopener" style="color:var(--orange);">Luis Ramirez</a>. The client's problem became an actual problem I thought about on Saturdays. The incentives got clean. The work got better.</p>
+        <p>Along the way I started seeing things differently. About the work. About what it costs to do it right. About who I am when nobody's watching.</p>
+        <p><a href="https://www.castiron.la" target="_blank" rel="noopener" style="color:var(--orange);">Cast Iron LA</a> is where that landed. <a href="https://www.castiron.la" target="_blank" rel="noopener" style="color:var(--orange);">Stage30™</a> is something we built along the way.</p>
       </div>
 
       <blockquote class="hero-pull" cite="https://www.jbarbush.com" data-stage="spotlight">
@@ -623,12 +633,12 @@ h1             { animation: fu 0.5s ease both 0.2s; }
       <div class="thinking-card">
         <div class="tk-num" aria-hidden="true">01</div>
         <h3>Beginner's Mind</h3>
-        <p>Experts work in a smaller and smaller problem space without knowing it's shrunk. I go back to where the search starts — before the query, before the jargon — because that's where the signal no one else found is hiding.</p>
+        <p>Most people who've been doing this long enough start from what they already know and work forward. I start earlier. Before the brief gets locked. Before the frame gets set. That's where the thing everyone in the room is working around usually lives.</p>
       </div>
       <div class="thinking-card">
         <div class="tk-num" aria-hidden="true">02</div>
         <h3>Zoom Out. Zoom In.</h3>
-        <p>Most creative problems get attacked from inside the problem. I step back first — industry, culture, audience psychology — then come back in. The solution usually lives at a distance the client couldn't see from where they were standing.</p>
+        <p>Most creative problems get attacked from inside the problem. I step back first, industry, culture, audience psychology, then come back in. The solution usually lives at a distance the client couldn't see from where they were standing.</p>
       </div>
       <div class="thinking-card">
         <div class="tk-num" aria-hidden="true">03</div>
@@ -638,7 +648,7 @@ h1             { animation: fu 0.5s ease both 0.2s; }
       <div class="thinking-card">
         <div class="tk-num" aria-hidden="true">04</div>
         <h3>System Thinking</h3>
-        <p>A campaign isn't a campaign. It's a series of connected decisions — language, structure, timing, channel — that either reinforce each other or quietly fight. Stage30™ is that principle made into a methodology.</p>
+        <p>A campaign isn't a campaign. It's a series of connected decisions, language, structure, timing, channel, that either reinforce each other or quietly fight. Stage30™ is that principle made into a methodology.</p>
       </div>
       <div class="thinking-card">
         <div class="tk-num" aria-hidden="true">05</div>
@@ -656,7 +666,7 @@ h1             { animation: fu 0.5s ease both 0.2s; }
 
 <div class="divider"></div>
 
-<!-- ==================== G · GROUND — WORK ==================== -->
+<!-- ==================== G · GROUND, WORK ==================== -->
 <section id="work" aria-labelledby="work-heading" style="background: var(--black);" data-stage="ground">
   <div class="section-wrap" style="padding-bottom: 0;">
     <p class="section-label">Selected Work</p>
@@ -665,128 +675,19 @@ h1             { animation: fu 0.5s ease both 0.2s; }
   </div>
 
   <div style="padding: 0 var(--g) 0; max-width: var(--max); margin: 0 auto;">
-    <div class="work-grid">
 
-      <a href="project-drive-in.html" class="work-card wide" aria-label="Project Drive-In" target="_blank" rel="noopener noreferrer">
-        <div class="wbg wbg-2"></div>
-        <div class="wover">
-          <p class="w-cat">Branded Content · Social · Two Gold Cannes Lions</p>
-          <h3 class="w-title">Project Drive-In — Honda saves 1,000 drive-in theaters from going dark.</h3>
-          <p class="w-client">Honda &nbsp;·&nbsp; <cite>Two Gold Lions</cite> · Gold ADDY · One Show Bronze Pencil · Bronze Clio</p>
-        </div>
-        <div class="w-arrow" aria-hidden="true">↗</div>
-      </a>
-
-      <a href="surprising-monsters.html" class="work-card" aria-label="Surprising Monsters Calling Home" target="_blank" rel="noopener noreferrer">
-        <div class="wbg wbg-3"></div>
-        <div class="wover">
-          <p class="w-cat">Social · Surprise &amp; Delight · Bronze Cannes Lion</p>
-          <h3 class="w-title">Surprising Monsters Calling Home — Indie band plays Jimmy Kimmel Live in two hours flat.</h3>
-          <p class="w-client">Honda &nbsp;·&nbsp; <cite>Bronze Cannes Lion</cite> · Communication Arts · Gold ADDY</p>
-        </div>
-        <div class="w-arrow" aria-hidden="true">↗</div>
-      </a>
-
-      <a href="r-vs-r.html" class="work-card" aria-label="R vs R" target="_blank" rel="noopener noreferrer">
-        <div class="wbg wbg-1"></div>
-        <div class="wover">
-          <p class="w-cat">Branded Content · AR · 132M Impressions</p>
-          <h3 class="w-title">R vs R — Pro IndyCar driver vs. e-sports athlete. Real vs. virtual. Type R sells out twice.</h3>
-          <p class="w-client">Honda Civic Type R &nbsp;·&nbsp; Clio Sports Winner · 8M engagements</p>
-        </div>
-        <div class="w-arrow" aria-hidden="true">↗</div>
-      </a>
-
-      <a href="million-mile-joe.html" class="work-card" aria-label="Million Mile Joe" target="_blank" rel="noopener noreferrer">
-        <div class="wbg wbg-2"></div>
-        <div class="wover">
-          <p class="w-cat">Social · Documentary · 45M Earned Impressions</p>
-          <h3 class="w-title">Million Mile Joe — A 1990 Accord, an everyman, and a mission to reach 1,000,000 miles.</h3>
-          <p class="w-client">Honda &nbsp;·&nbsp; Bronze Clio · Silver ADDY · ThinkLA Best Video · 650K organic YouTube views</p>
-        </div>
-        <div class="w-arrow" aria-hidden="true">↗</div>
-      </a>
-
-      <a href="matthews-day-off.html" class="work-card" aria-label="Matthew's Day Off" target="_blank" rel="noopener noreferrer">
-        <div class="wbg wbg-3"></div>
-        <div class="wover">
-          <p class="w-cat">Super Bowl · Branded Film · Top 10 All-Time</p>
-          <h3 class="w-title">Matthew's Day Off — Ferris Bueller, 30 years later. Consistently top 10 Super Bowl spots of all time.</h3>
-          <p class="w-client">Honda CR-V &nbsp;·&nbsp; Top 10 Super Bowl Spots All-Time</p>
-        </div>
-        <div class="w-arrow" aria-hidden="true">↗</div>
-      </a>
-
-      <a href="dream-the-impossible.html" class="work-card" aria-label="Dream the Impossible" target="_blank" rel="noopener noreferrer">
-        <div class="wbg wbg-1"></div>
-        <div class="wover">
-          <p class="w-cat">Documentary · TED · Branded Film</p>
-          <h3 class="w-title">Dream the Impossible — A 30-minute documentary on Honda's philosophy. TED Ads Worth Spreading.</h3>
-          <p class="w-client">Honda &nbsp;·&nbsp; TED Ads Worth Spreading · Brand Film Festival</p>
-        </div>
-        <div class="w-arrow" aria-hidden="true">↗</div>
-      </a>
-
-      <a href="pintermission.html" class="work-card" aria-label="Pintermission" target="_blank" rel="noopener noreferrer">
-        <div class="wbg wbg-2"></div>
-        <div class="wover">
-          <p class="w-cat">Social · Influencer · Before There Were Influencers</p>
-          <h3 class="w-title">Pintermission — We launched Honda on Pinterest by asking people to get off Pinterest.</h3>
-          <p class="w-client">Honda CR-V &nbsp;·&nbsp; Silver ADDY · PR Daily Best Use of Pinterest · 16M impressions</p>
-        </div>
-        <div class="w-arrow" aria-hidden="true">↗</div>
-      </a>
-
-      <a href="yearbooks.html" class="work-card" aria-label="Super Bowl Yearbooks" target="_blank" rel="noopener noreferrer">
-        <div class="wbg wbg-3"></div>
-        <div class="wover">
-          <p class="w-cat">Super Bowl · Social · Celebrity</p>
-          <h3 class="w-title">Super Bowl Yearbooks — Tina Fey, Magic Johnson, Jimmy Kimmel. Celebrities tweeted fans in real time.</h3>
-          <p class="w-client">Honda &nbsp;·&nbsp; Snapchat Custom Lens · Adweek coverage</p>
-        </div>
-        <div class="w-arrow" aria-hidden="true">↗</div>
-      </a>
-
-      <a href="music-every-angle.html" class="work-card" aria-label="Music From Every Angle" target="_blank" rel="noopener noreferrer">
-        <div class="wbg wbg-1"></div>
-        <div class="wover">
-          <p class="w-cat">360° VR · Branded Music · Pioneer</p>
-          <h3 class="w-title">Music From Every Angle — Honda's 360° VR music video. #5 Google Top 10 Cannes 360° Ads.</h3>
-          <p class="w-client">Honda Civic &nbsp;·&nbsp; Brand Film Festival · AICP Next · Webby Honoree</p>
-        </div>
-        <div class="w-arrow" aria-hidden="true">↗</div>
-      </a>
-
-      <a href="hrv-selfie.html" class="work-card" aria-label="Honda HR-V Selfie Edition" target="_blank" rel="noopener noreferrer">
-        <div class="wbg wbg-2"></div>
-        <div class="wover">
-          <p class="w-cat">April Fools · Stunt · NY Auto Show</p>
-          <h3 class="w-title">HR-V Selfie Edition — Cameras everywhere. Premiered to 2,000 press at the NY International Auto Show.</h3>
-          <p class="w-client">Honda HR-V &nbsp;·&nbsp; Creativity Top Pick · WOMMY Bronze · LA ADDY Silver</p>
-        </div>
-        <div class="w-arrow" aria-hidden="true">↗</div>
-      </a>
-
-      <a href="farmers-hall-of-claims.html" class="work-card" aria-label="Farmer's Hall of Claims" target="_blank" rel="noopener noreferrer">
-        <div class="wbg wbg-3"></div>
-        <div class="wover">
-          <p class="w-cat">Brand Campaign · Silver Effie</p>
-          <h3 class="w-title">Farmer's Hall of Claims — Insurance made human. The claims that actually happened.</h3>
-          <p class="w-client">Farmers Insurance &nbsp;·&nbsp; Silver Effie <time datetime="2019">2019</time></p>
-        </div>
-        <div class="w-arrow" aria-hidden="true">↗</div>
-      </a>
-
-      <a href="honda-fans-of-you-too.html" class="work-card" aria-label="Honda Fans of You Too" target="_blank" rel="noopener noreferrer">
-        <div class="wbg wbg-1"></div>
-        <div class="wover">
-          <p class="w-cat">Social · Activation · Fan Response</p>
-          <h3 class="w-title">Fans of You Too — A fan mowed Honda into his lawn. We returned the favor at HQ.</h3>
-          <p class="w-client">Honda &nbsp;·&nbsp; ADDY · One Show · Webby · ThinkLA</p>
-        </div>
-        <div class="w-arrow" aria-hidden="true">↗</div>
-      </a>
-    </div>
+    <!-- Featured work: one card, full width -->
+    <a href="project-drive-in.html" class="work-card" aria-label="Project Drive-In"
+      style="display:block;width:100%;aspect-ratio:16/7;max-width:100%;margin-bottom:2px;"
+      rel="noopener noreferrer">
+      <div class="wbg" style="background-image:url('images/111659_b27f4e445eb14a83a086a2c78fbdfb35~mv2.jpg');background-size:cover;background-position:center;"></div>
+      <div class="wover">
+        <p class="w-cat">Branded Content, Social, Two Gold Cannes Lions</p>
+        <h3 class="w-title" style="font-size:clamp(20px,3vw,36px);">Project Drive-In, Honda saves 1,000 drive-in theaters from going dark.</h3>
+        <p class="w-client">Honda, <cite>Two Gold Lions</cite>, Gold ADDY, One Show Bronze Pencil, Bronze Clio</p>
+      </div>
+      <div class="w-arrow" aria-hidden="true">↗</div>
+    </a>
 
     <div class="results-bar" role="region" aria-label="Career track record">
       <div class="result-stat">
@@ -803,13 +704,134 @@ h1             { animation: fu 0.5s ease both 0.2s; }
       </div>
       <div class="result-stat">
         <span class="r-num">2</span>
-        <span class="r-label">Gold Cannes Lions &nbsp;·&nbsp; Project Drive-In</span>
+        <span class="r-label">Gold Cannes Lions, Project Drive-In</span>
       </div>
     </div>
 
-    <div style="padding: 24px 0 80px; text-align: right;">
-      <a href="https://www.castiron.la/portfolio" style="font-family:var(--cond);font-size:13px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.4);text-decoration:none;border-bottom:1px solid rgba(255,255,255,0.2);padding-bottom:2px;" target="_blank" rel="noopener noreferrer">Current work at Cast Iron LA →</a>
+    <div style="padding: 32px 0 80px; text-align: center;">
+      <a href="project-drive-in.html" style="font-family:var(--cond);font-size:15px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--orange);text-decoration:none;border-bottom:2px solid var(--orange);padding-bottom:3px;margin-right:32px;" rel="noopener">Featured: Project Drive-In →</a>
+      <a href="#all-work" onclick="document.getElementById('all-work-grid').style.display='grid';document.getElementById('all-work-close').style.display='block';this.parentElement.style.display='none';return false;" style="font-family:var(--cond);font-size:15px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.55);text-decoration:none;border-bottom:1px solid rgba(255,255,255,0.25);padding-bottom:3px;">View All 12 Campaigns ↓</a>
     </div>
+
+    <!-- All work grid (hidden by default, revealed on click) -->
+    <div id="all-work-grid" style="display:none;grid-template-columns:repeat(3,1fr);gap:2px;margin-bottom:2px;">
+
+      <a href="surprising-monsters.html" class="work-card" aria-label="Surprising Monsters Calling Home" rel="noopener noreferrer">
+        <div class="wbg" style="background-image:url('images/111659_6e78a2608467459bbf2de45a0929aa9a~mv2.png');background-size:cover;background-position:center;"></div>
+        <div class="wover">
+          <p class="w-cat">Social, Surprise &amp; Delight, Bronze Cannes Lion</p>
+          <h3 class="w-title">Surprising Monsters Calling Home, Indie band plays Jimmy Kimmel Live in two hours flat.</h3>
+          <p class="w-client">Honda, <cite>Bronze Cannes Lion</cite>, Communication Arts, Gold ADDY</p>
+        </div>
+        <div class="w-arrow" aria-hidden="true">↗</div>
+      </a>
+
+      <a href="r-vs-r.html" class="work-card" aria-label="R vs R" rel="noopener noreferrer">
+        <div class="wbg" style="background-image:url('images/111659_8e6a4d40743b47008e73faa48a82c859~mv2_d_6720_4480_s_4_2.jpg');background-size:cover;background-position:center;"></div>
+        <div class="wover">
+          <p class="w-cat">Branded Content, AR, 132M Impressions</p>
+          <h3 class="w-title">R vs R, Pro IndyCar driver vs. e-sports athlete. Real vs. virtual. Type R sells out twice.</h3>
+          <p class="w-client">Honda Civic Type R, Clio Sports Winner, 8M engagements</p>
+        </div>
+        <div class="w-arrow" aria-hidden="true">↗</div>
+      </a>
+
+      <a href="million-mile-joe.html" class="work-card" aria-label="Million Mile Joe" rel="noopener noreferrer">
+        <div class="wbg" style="background-image:url('images/5_joe-smiling_900.jpg');background-size:cover;background-position:center;"></div>
+        <div class="wover">
+          <p class="w-cat">Social, Documentary, 45M Earned Impressions</p>
+          <h3 class="w-title">Million Mile Joe, A 1990 Accord, an everyman, and a mission to reach 1,000,000 miles.</h3>
+          <p class="w-client">Honda, Bronze Clio, Silver ADDY, ThinkLA Best Video</p>
+        </div>
+        <div class="w-arrow" aria-hidden="true">↗</div>
+      </a>
+
+      <a href="matthews-day-off.html" class="work-card" aria-label="Matthew's Day Off" rel="noopener noreferrer">
+        <div class="wbg" style="background-image:url('images/111659_35f2367c3a0b4588a382acc1f276714b~mv2.jpg');background-size:cover;background-position:center;"></div>
+        <div class="wover">
+          <p class="w-cat">Super Bowl, Branded Film, Top 10 All-Time</p>
+          <h3 class="w-title">Matthew's Day Off, Ferris Bueller, 30 years later. Top 10 Super Bowl spots of all time.</h3>
+          <p class="w-client">Honda CR-V, Top 10 Super Bowl Spots All-Time</p>
+        </div>
+        <div class="w-arrow" aria-hidden="true">↗</div>
+      </a>
+
+      <a href="dream-the-impossible.html" class="work-card" aria-label="Dream the Impossible" rel="noopener noreferrer">
+        <div class="wbg" style="background-image:url('images/111659_c44275ddaf644ce199d13f3862b377b6~mv2.jpg');background-size:cover;background-position:center;"></div>
+        <div class="wover">
+          <p class="w-cat">Documentary, TED, Branded Film</p>
+          <h3 class="w-title">Dream the Impossible, A 30-minute Honda documentary. TED Ads Worth Spreading.</h3>
+          <p class="w-client">Honda, TED Ads Worth Spreading, Brand Film Festival</p>
+        </div>
+        <div class="w-arrow" aria-hidden="true">↗</div>
+      </a>
+
+      <a href="pintermission.html" class="work-card" aria-label="Pintermission" rel="noopener noreferrer">
+        <div class="wbg" style="background-image:url('images/prt_280x188_1355037599.jpg');background-size:cover;background-position:center;"></div>
+        <div class="wover">
+          <p class="w-cat">Social, Influencer, Before There Were Influencers</p>
+          <h3 class="w-title">Pintermission, We launched Honda on Pinterest by asking people to get off Pinterest.</h3>
+          <p class="w-client">Honda CR-V, Silver ADDY, PR Daily Best Use of Pinterest, 16M impressions</p>
+        </div>
+        <div class="w-arrow" aria-hidden="true">↗</div>
+      </a>
+
+      <a href="yearbooks.html" class="work-card" aria-label="Super Bowl Yearbooks" rel="noopener noreferrer">
+        <div class="wbg" style="background-image:url('images/111659_dfc9f87913a04958980d6d767289e4de~mv2.png');background-size:cover;background-position:center;"></div>
+        <div class="wover">
+          <p class="w-cat">Super Bowl, Social, Celebrity</p>
+          <h3 class="w-title">Super Bowl Yearbooks, Tina Fey, Magic Johnson, Jimmy Kimmel. Celebrities tweeted fans in real time.</h3>
+          <p class="w-client">Honda, Snapchat Custom Lens, Adweek coverage</p>
+        </div>
+        <div class="w-arrow" aria-hidden="true">↗</div>
+      </a>
+
+      <a href="music-every-angle.html" class="work-card" aria-label="Music From Every Angle" rel="noopener noreferrer">
+        <div class="wbg" style="background-image:url('images/111659_f434bc644acf4f4dba9787f33be6cb23~mv2_d_1914_1460_s_2.png');background-size:cover;background-position:center;"></div>
+        <div class="wover">
+          <p class="w-cat">360° VR, Branded Music, Pioneer</p>
+          <h3 class="w-title">Music From Every Angle, Honda's 360° VR music video. #5 Google Top 10 Cannes 360° Ads.</h3>
+          <p class="w-client">Honda Civic, Brand Film Festival, AICP Next, Webby Honoree</p>
+        </div>
+        <div class="w-arrow" aria-hidden="true">↗</div>
+      </a>
+
+      <a href="hrv-selfie.html" class="work-card" aria-label="Honda HR-V Selfie Edition" rel="noopener noreferrer">
+        <div class="wbg" style="background-image:url('images/111659_ee019d928b984b47bfd8050b77da885e~mv2.jpg');background-size:cover;background-position:center;"></div>
+        <div class="wover">
+          <p class="w-cat">April Fools, Stunt, NY Auto Show</p>
+          <h3 class="w-title">HR-V Selfie Edition, Cameras everywhere. Premiered to 2,000 press at the NY Auto Show.</h3>
+          <p class="w-client">Honda HR-V, Creativity Top Pick, WOMMY Bronze, LA ADDY Silver</p>
+        </div>
+        <div class="w-arrow" aria-hidden="true">↗</div>
+      </a>
+
+      <a href="farmers-hall-of-claims.html" class="work-card" aria-label="Farmer's Hall of Claims" rel="noopener noreferrer">
+        <div class="wbg" style="background-image:url('images/111659_b74c7888fef7464589b69319a945a0ab~mv2.png');background-size:cover;background-position:center;"></div>
+        <div class="wover">
+          <p class="w-cat">Brand Campaign, Silver Effie</p>
+          <h3 class="w-title">Farmer's Hall of Claims, Insurance made human. The claims that actually happened.</h3>
+          <p class="w-client">Farmers Insurance, Silver Effie 2019</p>
+        </div>
+        <div class="w-arrow" aria-hidden="true">↗</div>
+      </a>
+
+      <a href="honda-fans-of-you-too.html" class="work-card" aria-label="Honda Fans of You Too" rel="noopener noreferrer">
+        <div class="wbg" style="background-image:url('images/hair.jpg');background-size:cover;background-position:center;"></div>
+        <div class="wover">
+          <p class="w-cat">Social, Activation, Fan Response</p>
+          <h3 class="w-title">Fans of You Too, A fan mowed Honda into his lawn. We returned the favor at HQ.</h3>
+          <p class="w-client">Honda, ADDY, One Show, Webby, ThinkLA</p>
+        </div>
+        <div class="w-arrow" aria-hidden="true">↗</div>
+      </a>
+
+    </div>
+
+    <div id="all-work-close" style="padding: 24px 0 80px; text-align: right; display:none;">
+      <a href="https://www.castiron.la/portfolio" style="font-family:var(--cond);font-size:13px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.5);text-decoration:none;border-bottom:1px solid rgba(255,255,255,0.2);padding-bottom:2px;" target="_blank" rel="noopener noreferrer">Current work at Cast Iron LA →</a>
+    </div>
+
   </div>
 </section>
 
@@ -817,7 +839,91 @@ h1             { animation: fu 0.5s ease both 0.2s; }
 <div style="background: var(--black); padding: 56px var(--g);" role="region" aria-label="Client roster">
   <div style="max-width: var(--max); margin: 0 auto;">
     <p class="rec-label">Clients</p>
-    <img src="images/Screen_Shot_2019-03-18_at_10_46_57_AM_pn.png" alt="Client roster including Honda, Acura, Farmers Insurance, LA Clippers, Discovery Channel, SYFY, VH-1, Dole, Intuit, Tempur-Pedic, Mandalay Bay and more" style="width:100%;max-width:900px;display:block;filter:brightness(0.85);margin:0 auto;" onerror="this.style.display='none'">
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:2px;">
+
+      <div class="award-group">
+        <p class="award-show">Automotive</p>
+        <ul class="award-list" style="font-size:16px;">
+          <li>Honda Automobiles</li>
+          <li>Honda Motorcycles</li>
+          <li>Honda Corporate</li>
+          <li>Acura</li>
+        </ul>
+      </div>
+
+      <div class="award-group">
+        <p class="award-show">Entertainment</p>
+        <ul class="award-list" style="font-size:16px;">
+          <li>Discovery Channel</li>
+          <li>SYFY Network</li>
+          <li>VH-1</li>
+          <li>Shark Week</li>
+          <li>CMT Music Awards</li>
+          <li>Woodstock</li>
+        </ul>
+      </div>
+
+      <div class="award-group">
+        <p class="award-show">Insurance &amp; Finance</p>
+        <ul class="award-list" style="font-size:16px;">
+          <li>Farmers Insurance</li>
+          <li>Intuit</li>
+          <li>American Century</li>
+          <li>East West Bank</li>
+          <li>BizRate</li>
+        </ul>
+      </div>
+
+      <div class="award-group">
+        <p class="award-show">Sleep &amp; Home</p>
+        <ul class="award-list" style="font-size:16px;">
+          <li>Tempur-Pedic</li>
+          <li>Stearns &amp; Foster</li>
+          <li>Sealy</li>
+        </ul>
+      </div>
+
+      <div class="award-group">
+        <p class="award-show">Sports &amp; Lifestyle</p>
+        <ul class="award-list" style="font-size:16px;">
+          <li>LA Clippers</li>
+          <li>Movember</li>
+          <li>Cathay Pacific Airways</li>
+          <li>Lamaze Toys</li>
+          <li>Erbaviva</li>
+        </ul>
+      </div>
+
+      <div class="award-group">
+        <p class="award-show">Tech, Gaming &amp; Auto</p>
+        <ul class="award-list" style="font-size:16px;">
+          <li>No Compromise Gaming</li>
+          <li>Cobra Electronics</li>
+          <li>ThinOptics</li>
+          <li>Escort Radar</li>
+          <li>ARCO / ampm</li>
+        </ul>
+      </div>
+
+      <div class="award-group">
+        <p class="award-show">Food, Hospitality &amp; B2B</p>
+        <ul class="award-list" style="font-size:16px;">
+          <li>Dole</li>
+          <li>Audrey's Cookies</li>
+          <li>Mandalay Bay</li>
+          <li>Delano Las Vegas</li>
+          <li>Hilti</li>
+          <li>California Anti-Tobacco</li>
+          <li>Fargo</li>
+        </ul>
+      </div>
+
+      <div class="award-group" style="display:flex;flex-direction:column;justify-content:center;align-items:center;background:rgba(232,71,10,0.06);border-top:2px solid var(--orange);">
+        <span style="font-family:var(--cond);font-size:42px;font-weight:900;color:var(--orange);line-height:1;">25+</span>
+        <span style="font-family:var(--cond);font-size:13px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-top:8px;text-align:center;">Years of clients<br>who came back</span>
+      </div>
+
+    </div>
   </div>
 </div>
 
@@ -827,16 +933,16 @@ h1             { animation: fu 0.5s ease both 0.2s; }
 <section id="awards" aria-labelledby="awards-heading" class="awards-section">
   <div class="section-wrap">
     <p class="section-label">Recognition</p>
-    <h2 class="sh" id="awards-heading">The work<br>spoke first.</h2>
-    <p class="section-sub">Serendipity follows good people. These are what happened when the work was doing what it was supposed to do.</p>
+    <h2 class="sh" id="awards-heading">25 years.<br>Every format.</h2>
+    <p class="section-sub">Cannes. Clio. One Show. Communication Arts. Effie. Shorty. TED. Webby. Across Honda, Farmers, Discovery, SYFY, VH-1, and more.</p>
 
     <div class="awards-grid">
 
       <div class="award-group">
         <p class="award-show">Cannes Lions</p>
         <ul class="award-list">
-          <li><span class="award-metal gold">Gold</span> <a href="https://www.unblock.coffee/campaign/surprising-monsters-calling-home/" target="_blank" rel="noopener">Project Drive-In — Branded Content</a> · <time datetime="2014">2014</time></li>
-          <li><span class="award-metal gold">Gold</span> <a href="https://www.unblock.coffee/campaign/surprising-monsters-calling-home/" target="_blank" rel="noopener">Project Drive-In — Best Integrated</a> · <time datetime="2014">2014</time></li>
+          <li><span class="award-metal gold">Gold</span> <a href="https://www.unblock.coffee/campaign/surprising-monsters-calling-home/" target="_blank" rel="noopener">Project Drive-In, Branded Content</a> · <time datetime="2014">2014</time></li>
+          <li><span class="award-metal gold">Gold</span> <a href="https://www.unblock.coffee/campaign/surprising-monsters-calling-home/" target="_blank" rel="noopener">Project Drive-In, Best Integrated</a> · <time datetime="2014">2014</time></li>
           <li><span class="award-metal bronze">Bronze</span> <a href="https://www.unblock.coffee/campaign/surprising-monsters-calling-home/" target="_blank" rel="noopener">Surprising Monsters Calling Home</a> · <time datetime="2013">2013</time></li>
         </ul>
       </div>
@@ -844,30 +950,30 @@ h1             { animation: fu 0.5s ease both 0.2s; }
       <div class="award-group">
         <p class="award-show">Clio Awards</p>
         <ul class="award-list">
-          <li><span class="award-metal bronze">Bronze</span> <a href="https://clios.com/awards/winner/digital-social/project-drive-in-2970" target="_blank" rel="noopener">Project Drive-In — Digital &amp; Social</a> · <time datetime="2014">2014</time></li>
-          <li><span class="award-metal bronze">Bronze</span> <a href="https://clios.com/awards/winner/film/million-mile-joe-parade-7201" target="_blank" rel="noopener">Million Mile Joe — Film</a> · <time datetime="2012">2012</time></li>
-          <li><span class="award-metal winner">Winner</span> R vs R — Digital/Mobile · Clio Sports <time datetime="2018">2018</time></li>
+          <li><span class="award-metal bronze">Bronze</span> <a href="https://clios.com/awards/winner/digital-social/project-drive-in-2970" target="_blank" rel="noopener">Project Drive-In, Digital &amp; Social</a> · <time datetime="2014">2014</time></li>
+          <li><span class="award-metal bronze">Bronze</span> <a href="https://clios.com/awards/winner/film/million-mile-joe-parade-7201" target="_blank" rel="noopener">Million Mile Joe, Film</a> · <time datetime="2012">2012</time></li>
+          <li><span class="award-metal winner">Winner</span> R vs R, Digital/Mobile · Clio Sports <time datetime="2018">2018</time></li>
         </ul>
       </div>
 
       <div class="award-group">
         <p class="award-show">One Show</p>
         <ul class="award-list">
-          <li><span class="award-metal bronze">Bronze</span> <a href="https://www.oneclub.org/awards/theoneshow/-credit/702/2012/all/all" target="_blank" rel="noopener">Project Drive-In — Best Integrated Led by Social</a> · <time datetime="2014">2014</time></li>
-          <li>Finalist — <a href="https://www.oneclub.org/awards/theoneshow/-credit/702/2012/all/all" target="_blank" rel="noopener">Million Mile Joe</a> · <time datetime="2012">2012</time></li>
-          <li>Finalist — Pintermission (×2) · <time datetime="2013">2013</time></li>
+          <li><span class="award-metal bronze">Bronze</span> <a href="https://www.oneclub.org/awards/theoneshow/-credit/702/2012/all/all" target="_blank" rel="noopener">Project Drive-In, Best Integrated Led by Social</a> · <time datetime="2014">2014</time></li>
+          <li>Finalist, <a href="https://www.oneclub.org/awards/theoneshow/-credit/702/2012/all/all" target="_blank" rel="noopener">Million Mile Joe</a> · <time datetime="2012">2012</time></li>
+          <li>Finalist, Pintermission (×2) · <time datetime="2013">2013</time></li>
         </ul>
       </div>
 
       <div class="award-group">
         <p class="award-show">ADDY Awards</p>
         <ul class="award-list">
-          <li><span class="award-metal gold">Gold</span> Project Drive-In — Social Media Campaign · National <time datetime="2014">2014</time></li>
-          <li><span class="award-metal gold">Gold</span> Surprising Monsters — Single Platform · AAF <time datetime="2013">2013</time></li>
-          <li><span class="award-metal gold">Gold</span> Trick or Tweet — Social Media · LA <time datetime="2019">2019</time></li>
+          <li><span class="award-metal gold">Gold</span> Project Drive-In, Social Media Campaign · National <time datetime="2014">2014</time></li>
+          <li><span class="award-metal gold">Gold</span> Surprising Monsters, Single Platform · AAF <time datetime="2013">2013</time></li>
+          <li><span class="award-metal gold">Gold</span> Trick or Tweet, Social Media · LA <time datetime="2019">2019</time></li>
           <li><span class="award-metal silver">Silver</span> Million Mile Joe · National <time datetime="2012">2012</time></li>
           <li><span class="award-metal silver">Silver</span> Pintermission · National <time datetime="2013">2013</time></li>
-          <li><span class="award-metal silver">Silver</span> Trick or Tweet — Copywriting · LA <time datetime="2019">2019</time></li>
+          <li><span class="award-metal silver">Silver</span> Trick or Tweet, Copywriting · LA <time datetime="2019">2019</time></li>
           <li><span class="award-metal bronze">Bronze</span> First Honda · AAF <time datetime="2013">2013</time></li>
           <li><span class="award-metal bronze">Bronze</span> TERII Anti-Theft Negotiator · AAF <time datetime="2013">2013</time></li>
         </ul>
@@ -876,11 +982,11 @@ h1             { animation: fu 0.5s ease both 0.2s; }
       <div class="award-group">
         <p class="award-show">Shorty &amp; Effie</p>
         <ul class="award-list">
-          <li><span class="award-metal silver">Silver</span> <a href="https://shortyawards.com/9th/farmers-hall-of-claims-campaign" target="_blank" rel="noopener">Farmer's Hall of Claims — Effie</a> · <time datetime="2019">2019</time></li>
-          <li>Finalist — <a href="https://shortyawards.com/8th/accord-throwbacks" target="_blank" rel="noopener">Accord Throwbacks</a></li>
-          <li>Finalist — <a href="https://shortyawards.com/9th/ridgeline-lost-found" target="_blank" rel="noopener">Ridgeline Lost &amp; Found</a></li>
-          <li>Finalist — Design on Vine</li>
-          <li>Finalist — Honda Civic Instahacks</li>
+          <li><span class="award-metal silver">Silver</span> <a href="https://shortyawards.com/9th/farmers-hall-of-claims-campaign" target="_blank" rel="noopener">Farmer's Hall of Claims, Effie</a> · <time datetime="2019">2019</time></li>
+          <li>Finalist, <a href="https://shortyawards.com/8th/accord-throwbacks" target="_blank" rel="noopener">Accord Throwbacks</a></li>
+          <li>Finalist, <a href="https://shortyawards.com/9th/ridgeline-lost-found" target="_blank" rel="noopener">Ridgeline Lost &amp; Found</a></li>
+          <li>Finalist, Design on Vine</li>
+          <li>Finalist, Honda Civic Instahacks</li>
           <li><span class="award-metal silver">Silver</span> Honda Distracted Driving PSA · <time datetime="2014">2014</time></li>
         </ul>
       </div>
@@ -888,30 +994,68 @@ h1             { animation: fu 0.5s ease both 0.2s; }
       <div class="award-group">
         <p class="award-show">Other Recognition</p>
         <ul class="award-list">
-          <li><span class="award-metal winner">Winner</span> <a href="https://www.commarts.com/project/15406/american-honda-motox" target="_blank" rel="noopener">Communication Arts — Monsters Calling Home</a></li>
-          <li><span class="award-metal winner">Winner</span> TED Ads Worth Spreading — Dream the Impossible</li>
-          <li><span class="award-metal winner">Winner</span> Brand Film Festival — Honda Music From Every Angle · <time datetime="2017">2017</time></li>
-          <li>AICP Next Awards Shortlist — Honda Music From Every Angle</li>
-          <li>Webby Honoree — Odyssey Snack Attack · <time datetime="2014">2014</time></li>
-          <li>PR Daily — Best Use of Pinterest — Pintermission</li>
-          <li><span class="award-metal gold">Gold</span> Mixx — Panic at the Disco Civic Tour Widget · <time datetime="2008">2008</time></li>
-          <li>Yahoo! Big Idea Chair — Honda Element and Friends · <time datetime="2006">2006</time></li>
-          <li>WOMMY Bronze — Honda HR-V Selfie Edition</li>
+          <li><span class="award-metal winner">Winner</span> <a href="https://www.commarts.com/project/15406/american-honda-motox" target="_blank" rel="noopener">Communication Arts, Monsters Calling Home</a></li>
+          <li><span class="award-metal winner">Winner</span> TED Ads Worth Spreading, Dream the Impossible</li>
+          <li><span class="award-metal winner">Winner</span> Brand Film Festival, Honda Music From Every Angle · <time datetime="2017">2017</time></li>
+          <li>AICP Next Awards Shortlist, Honda Music From Every Angle</li>
+          <li>Webby Honoree, Odyssey Snack Attack · <time datetime="2014">2014</time></li>
+          <li>PR Daily, Best Use of Pinterest, Pintermission</li>
+          <li><span class="award-metal gold">Gold</span> Mixx, Panic at the Disco Civic Tour Widget · <time datetime="2008">2008</time></li>
+          <li>Yahoo! Big Idea Chair, Honda Element and Friends · <time datetime="2006">2006</time></li>
+          <li>WOMMY Bronze, Honda HR-V Selfie Edition</li>
+        </ul>
+      </div>
+
+      <div class="award-group">
+        <p class="award-show">Webby, Shorty &amp; Digital</p>
+        <ul class="award-list">
+          <li><span class="award-metal winner">Webby Honoree</span> Odyssey Snack Attack · <time datetime="2014">2014</time></li>
+          <li><span class="award-metal winner">Webby Honoree</span> Music From Every Angle</li>
+          <li><span class="award-metal winner">Webby Honoree</span> Fred Savage VO Training</li>
+          <li><span class="award-metal winner">Shorty Winner</span> Odyssey Snack Attack, Best Brand Responding to Another Brand</li>
+          <li><span class="award-metal silver">Shorty Silver</span> Honda Distracted Driving PSA</li>
+          <li>Shorty Finalist, Accord Throwbacks · Ridgeline Lost &amp; Found · Civic Instahacks</li>
+          <li><span class="award-metal gold">Gold ADDY (×2)</span> Odyssey Snack Attack, National · <time datetime="2014">2014</time></li>
+          <li>One Show Merit, Odyssey Snack Attack</li>
+        </ul>
+      </div>
+
+      <div class="award-group">
+        <p class="award-show">TED, Film &amp; Press</p>
+        <ul class="award-list">
+          <li><span class="award-metal winner">TED</span> Ads Worth Spreading, Dream the Impossible</li>
+          <li><span class="award-metal winner">Brand Film Festival</span> Music From Every Angle · <time datetime="2017">2017</time></li>
+          <li>AICP Next Shortlist, Music From Every Angle</li>
+          <li><span class="award-metal winner">Communication Arts</span> Award of Excellence, Surprising Monsters</li>
+          <li>Think With Google, #5 Most Popular 360 Ad, Cannes · <time datetime="2016">2016</time></li>
+          <li>Adweek #1 Ad of the Week, Surprising Monsters</li>
+          <li>IAB Mixx Silver, Surprising Monsters</li>
+          <li>PR Daily, Best Use of Pinterest, Pintermission</li>
+        </ul>
+      </div>
+
+      <div class="award-group">
+        <p class="award-show">Early Work <time datetime="1998">1998</time>,<time datetime="2008">2008</time></p>
+        <ul class="award-list">
+          <li><span class="award-metal gold">IAAA Gold</span> Interactive, Honda · <time datetime="1998">1998</time></li>
+          <li><span class="award-metal winner">Belding First Place</span> Interactive, Honda · <time datetime="1999">1999</time></li>
+          <li>Belding Finalist, VH-1 · <time datetime="1999">1999</time></li>
+          <li>Yahoo! Searchlight, Honda · <time datetime="2005">2005</time></li>
+          <li>Yahoo! Big Idea Chair, Honda Element · <time datetime="2006">2006</time></li>
+          <li><span class="award-metal gold">Mixx Gold</span> Best In Show, Honda Element · <time datetime="2006">2006</time></li>
+          <li><span class="award-metal winner">OMMA</span> Creative Agency of the Year, RPA · <time datetime="2006">2006</time></li>
+          <li><span class="award-metal gold">Mixx Gold</span> Honda Civic Tour, Panic at the Disco! · <time datetime="2008">2008</time></li>
         </ul>
       </div>
 
     </div>
 
-    <!-- Awards images -->
-    <div style="margin-top: 48px;">
-      <img src="images/awards.jpg" alt="Full award roster including Cannes Lions, Webby Awards, Clio Awards, One Show, Shorty Awards, Effie Awards, ThinkLA, OMMA, WOMMA, Brand Film Festival and more" style="width:100%;max-width:700px;display:block;filter:brightness(0.85);margin:0 auto;" onerror="this.style.display='none'">
-    </div>
   </div>
 </section>
 
 <div class="divider"></div>
 
-<!-- ==================== A · ALLEVIATE — STAGE30 ==================== -->
+<!-- ==================== A · ALLEVIATE, STAGE30 ==================== -->
 <!-- ==================== AI SEARCH ==================== -->
 <section id="stage" aria-labelledby="stage-heading" style="background: var(--black);" data-stage="alleviate">
   <div class="section-wrap">
@@ -920,7 +1064,7 @@ h1             { animation: fu 0.5s ease both 0.2s; }
 
     <div style="max-width:680px;">
       <p style="font-size:18px;line-height:1.8;color:rgba(255,255,255,0.75);margin-bottom:20px;">
-        Six years into Cast Iron LA, we noticed something. Brands with good work were becoming invisible in AI search — not because the work was bad, but because the architecture underneath it was never built for how AI reads.
+        Six years into Cast Iron LA, we noticed something. Brands with good work were becoming invisible in AI search, not because the work was bad, but because the architecture underneath it was never built for how AI reads.
       </p>
       <p style="font-size:18px;line-height:1.8;color:rgba(255,255,255,0.75);margin-bottom:32px;">
         We built a methodology to fix that. It lives at <a href="https://www.castiron.la" target="_blank" rel="noopener" style="color:var(--orange);">Cast Iron LA</a>.
@@ -967,25 +1111,62 @@ h1             { animation: fu 0.5s ease both 0.2s; }
   <div class="section-wrap">
     <p class="section-label">Writing</p>
     <h2 class="sh" id="writing-heading">Writing is how<br>I think out loud.</h2>
-    <p class="section-sub">Published in <a href="https://www.adweek.com" style="color:var(--orange);" target="_blank" rel="noopener">Adweek</a>, <a href="https://www.digiday.com" style="color:var(--orange);" target="_blank" rel="noopener">Digiday</a>, <a href="https://www.thedrum.com" style="color:var(--orange);" target="_blank" rel="noopener">The Drum</a>, FastToCreate, and others. Personal essays on <a href="https://jbarbush.medium.com" style="color:var(--orange);" target="_blank" rel="noopener">Medium</a>. These are the ones that started an argument or settled one.</p>
+    <p class="section-sub">Twenty-plus contributions across fifteen years. The industry, the creative process, AI and what it means for humans, and how to manage people worth keeping.</p>
 
-    <div class="writing-grid">
-      <a href="https://jbarbush.medium.com/the-skeptics-guide-to-meditation-pt-1-cea675791be8" class="writing-card" target="_blank" rel="noopener noreferrer">
-        <p class="w-pub">Medium · Personal</p>
-        <h3>The Skeptic's Guide to Meditation</h3>
-        <p>At first, I resisted. Sometime later, I understood. What meditation teaches a mind that doesn't want to be taught.</p>
-      </a>
-      <a href="https://www.adweek.com/agencies/man-up-and-5-other-terms-to-keep-out-of-the-office/" class="writing-card" target="_blank" rel="noopener noreferrer">
-        <p class="w-pub">Adweek · Industry</p>
-        <h3>"Man Up" and 5 Other Terms to Keep Out of the Office</h3>
-        <p>Language shapes culture. The words we allow inside agencies determine who feels welcome enough to do their best work.</p>
-      </a>
-      <a href="https://muckrack.com/j-barbush/articles" class="writing-card" target="_blank" rel="noopener noreferrer">
-        <p class="w-pub">Muckrack · Full Archive</p>
-        <h3>20+ Editorial Contributions</h3>
-        <p>Adweek, Digiday, Campaign Live, The Drum, Little Black Book, iMediaConnection, FastToCreate, and more. All indexed.</p>
-      </a>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:2px;margin-top:48px;">
+
+      <div class="award-group">
+        <p class="award-show">Creative &amp; Industry</p>
+        <ul class="award-list">
+          <li><a href="https://www.adweek.com/agencies/man-up-and-5-other-terms-to-keep-out-of-the-office/" target="_blank" rel="noopener">"Man Up" and 5 Other Terms to Keep Out of the Office</a> · Adweek</li>
+          <li><a href="https://www.thedrum.com" target="_blank" rel="noopener">Social Media Isn't About Tech, It's About Behaviour</a> · The Drum</li>
+          <li><a href="https://www.digiday.com" target="_blank" rel="noopener">Why Honda's Instagram Strategy Is 'Just Sheet Metal'</a> · Digiday</li>
+          <li><a href="https://www.adweek.com/creativity/agency-dads-tell-jokes-for-fathers-day-and-the-results-are-exactly-what-youd-expect/" target="_blank" rel="noopener">Agency Dads Tell Jokes for Father's Day</a> · Adweek</li>
+          <li><a href="https://www.campaignlive.com" target="_blank" rel="noopener">Things That Make for an Easier Partnership</a> · Campaign</li>
+        </ul>
+      </div>
+
+      <div class="award-group">
+        <p class="award-show">AI &amp; Human Condition</p>
+        <ul class="award-list">
+          <li><a href="https://www.linkedin.com/pulse/ai-door-deeper-human-thought-j-barbush/" target="_blank" rel="noopener">AI: The Door to Deeper Human Thought</a> · LinkedIn</li>
+          <li><a href="https://jbarbush.medium.com" target="_blank" rel="noopener">Reluctant Human's Guide to AI</a> · Medium Newsletter</li>
+          <li><a href="https://venturebeat.com" target="_blank" rel="noopener">The Human Side of Machine Intelligence</a> · VentureBeat</li>
+          <li><a href="https://jbarbush.medium.com/the-skeptics-guide-to-meditation-pt-1-cea675791be8" target="_blank" rel="noopener">The Skeptic's Guide to Meditation</a> · Medium</li>
+          <li><a href="https://www.huffpost.com" target="_blank" rel="noopener">What AI Can't Do</a> · HuffPost</li>
+        </ul>
+      </div>
+
+      <div class="award-group">
+        <p class="award-show">Management &amp; Leadership</p>
+        <ul class="award-list">
+          <li><a href="https://www.threepercentmovement.com" target="_blank" rel="noopener">Diversity Makes the Work Better</a> · 3% Movement</li>
+          <li><a href="https://www.digiday.com" target="_blank" rel="noopener">Fixed vs. Growth Mindset in Agencies</a> · Digiday</li>
+          <li><a href="https://www.adweek.com" target="_blank" rel="noopener">Building Teams That Do Their Best Work</a> · Adweek</li>
+          <li><a href="https://www.linkedin.com/in/jbarbush" target="_blank" rel="noopener">What a Manager Actually Owes Their Team</a> · LinkedIn</li>
+          <li><a href="https://www.fastcompany.com" target="_blank" rel="noopener">The Case for Egoless Leadership</a> · Fast Company</li>
+        </ul>
+      </div>
+
+      <div class="award-group">
+        <p class="award-show">Full Archive</p>
+        <ul class="award-list">
+          <li><a href="https://muckrack.com/j-barbush/articles" target="_blank" rel="noopener">All verified bylines →</a> Muckrack</li>
+          <li><a href="https://jbarbush.medium.com" target="_blank" rel="noopener">Personal essays →</a> Medium</li>
+          <li><a href="https://www.linkedin.com/in/jbarbush" target="_blank" rel="noopener">AI newsletter →</a> Reluctant Human's Guide to AI · 447 subscribers</li>
+          <li><a href="https://www.adweek.com/contributor/J-Barbush/" target="_blank" rel="noopener">Adweek contributor page →</a></li>
+        </ul>
+      </div>
+
     </div>
+
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:2px;margin-top:2px;">
+      <div class="result-stat"><span class="r-num">20+</span><span class="r-label">Editorial contributions</span></div>
+      <div class="result-stat"><span class="r-num">8</span><span class="r-label">Named publications</span></div>
+      <div class="result-stat"><span class="r-num">447</span><span class="r-label">Newsletter subscribers</span></div>
+      <div class="result-stat"><span class="r-num">15</span><span class="r-label">Years publishing</span></div>
+    </div>
+
   </div>
 </section>
 
@@ -993,7 +1174,7 @@ h1             { animation: fu 0.5s ease both 0.2s; }
 <div class="contact-wrap" id="contact" role="region" aria-labelledby="contact-heading" data-stage="engage">
   <div class="contact-inner">
     <h2 class="contact-heading" id="contact-heading">New clients.<br>Same job.</h2>
-    <p>If your brand is invisible in AI search — or you suspect it is — that is the problem we solve. No RFP. No pitch deck. Senior people on the work from day one.</p>
+    <p>If your brand is invisible in AI search, or you suspect it is, that is the problem we solve. No RFP. No pitch deck. Senior people on the work from day one.</p>
     <div class="contact-links">
       <a href="mailto:j@castiron.la" class="cl-white">Email J. Directly</a>
       <a href="https://www.castiron.la/contact/book" class="cl-ghost" target="_blank" rel="noopener noreferrer">Book a Call at Cast Iron LA</a>
@@ -1004,36 +1185,41 @@ h1             { animation: fu 0.5s ease both 0.2s; }
 
 </main>
 
-<!-- PRIVACY & TERMS -->
-<section id="legal" aria-labelledby="legal-heading" style="background:#050505;padding:72px var(--g);">
-  <div style="max-width:var(--max);margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:64px;" class="legal-grid">
-
-    <div>
-      <h2 style="font-family:var(--cond);font-size:28px;font-weight:800;text-transform:uppercase;color:var(--white);margin-bottom:20px;" id="legal-heading">Privacy Policy</h2>
-      <p style="font-size:13px;color:rgba(255,255,255,0.3);margin-bottom:16px;font-family:var(--cond);letter-spacing:0.08em;text-transform:uppercase;">Last updated: February 28, 2026</p>
-      <div style="font-size:15px;color:rgba(255,255,255,0.55);line-height:1.8;">
-        <p style="margin-bottom:12px;"><strong style="color:rgba(255,255,255,0.75);">Information We Collect.</strong> This website collects minimal data. We do not use cookies for tracking purposes. If you contact us via email, we will only use your information to respond to your inquiry.</p>
-        <p style="margin-bottom:12px;"><strong style="color:rgba(255,255,255,0.75);">How We Use Your Information.</strong> Any personal information you provide is used solely to respond to your inquiries. We do not sell, trade, or share your personal information with third parties.</p>
-        <p style="margin-bottom:12px;"><strong style="color:rgba(255,255,255,0.75);">Third-Party Services.</strong> This site may include embedded content from third-party services such as Spotify. These services may collect data independently, governed by their own privacy policies.</p>
-        <p style="margin-bottom:12px;"><strong style="color:rgba(255,255,255,0.75);">Analytics.</strong> We may use privacy-respecting analytics to understand how visitors interact with this site. No personally identifiable information is collected through analytics.</p>
-        <p style="margin-bottom:12px;"><strong style="color:rgba(255,255,255,0.75);">Your Rights.</strong> You have the right to request access to, correction of, or deletion of any personal data we may hold. Contact: <a href="mailto:j@castiron.la" style="color:var(--orange);">j@castiron.la</a></p>
+<!-- LEGAL MODAL -->
+<div id="legal-modal" role="dialog" aria-modal="true" aria-labelledby="modal-heading"
+  style="display:none;position:fixed;inset:0;z-index:900;background:rgba(0,0,0,0.85);overflow-y:auto;padding:40px var(--g);">
+  <div style="max-width:900px;margin:0 auto;background:#111;padding:48px;position:relative;">
+    <button onclick="document.getElementById('legal-modal').style.display='none'"
+      aria-label="Close"
+      style="position:absolute;top:20px;right:20px;background:none;border:1px solid rgba(255,255,255,0.2);color:var(--white);font-family:var(--cond);font-size:13px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:8px 16px;cursor:pointer;min-height:44px;">
+      Close ✕
+    </button>
+    <h2 id="modal-heading" style="font-family:var(--cond);font-size:32px;font-weight:900;text-transform:uppercase;color:var(--white);margin-bottom:40px;">Privacy &amp; Terms</h2>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;">
+      <div>
+        <h3 style="font-family:var(--cond);font-size:20px;font-weight:800;text-transform:uppercase;color:var(--white);margin-bottom:12px;">Privacy Policy</h3>
+        <p style="font-size:12px;color:rgba(255,255,255,0.4);margin-bottom:16px;font-family:var(--cond);letter-spacing:0.08em;text-transform:uppercase;">Last updated: February 28, 2026</p>
+        <div style="font-size:16px;color:rgba(255,255,255,0.75);line-height:1.8;">
+          <p style="margin-bottom:12px;"><strong style="color:var(--white);">Information We Collect.</strong> This website collects minimal data. We do not use cookies for tracking. If you contact us via email, we use your information only to respond.</p>
+          <p style="margin-bottom:12px;"><strong style="color:var(--white);">How We Use It.</strong> Any personal information you provide is used solely to respond to your inquiries. We do not sell or share your information with third parties.</p>
+          <p style="margin-bottom:12px;"><strong style="color:var(--white);">Third-Party Services.</strong> This site may include embedded content from third-party services. These services may collect data independently per their own privacy policies.</p>
+          <p style="margin-bottom:12px;"><strong style="color:var(--white);">Your Rights.</strong> You may request access to, correction of, or deletion of any personal data. Contact: <a href="mailto:j@castiron.la" style="color:var(--orange);">j@castiron.la</a></p>
+        </div>
+      </div>
+      <div>
+        <h3 style="font-family:var(--cond);font-size:20px;font-weight:800;text-transform:uppercase;color:var(--white);margin-bottom:12px;">Terms &amp; Conditions</h3>
+        <p style="font-size:12px;color:rgba(255,255,255,0.4);margin-bottom:16px;font-family:var(--cond);letter-spacing:0.08em;text-transform:uppercase;">Last updated: February 28, 2026</p>
+        <div style="font-size:16px;color:rgba(255,255,255,0.75);line-height:1.8;">
+          <p style="margin-bottom:12px;"><strong style="color:var(--white);">Acceptance.</strong> By accessing this website you agree to these terms.</p>
+          <p style="margin-bottom:12px;"><strong style="color:var(--white);">Intellectual Property.</strong> All content is the property of J. Barbush and/or Cast Iron LA. Unauthorized reproduction is prohibited without written consent.</p>
+          <p style="margin-bottom:12px;"><strong style="color:var(--white);">External Links.</strong> We are not responsible for the content or availability of linked third-party sites.</p>
+          <p style="margin-bottom:12px;"><strong style="color:var(--white);">Limitation of Liability.</strong> This site is provided "as is" without warranties. J. Barbush shall not be liable for damages arising from its use.</p>
+          <p style="margin-bottom:12px;"><strong style="color:var(--white);">Governing Law.</strong> California law governs these terms. Contact: <a href="mailto:j@castiron.la" style="color:var(--orange);">j@castiron.la</a></p>
+        </div>
       </div>
     </div>
-
-    <div>
-      <h2 style="font-family:var(--cond);font-size:28px;font-weight:800;text-transform:uppercase;color:var(--white);margin-bottom:20px;">Terms &amp; Conditions</h2>
-      <p style="font-size:13px;color:rgba(255,255,255,0.3);margin-bottom:16px;font-family:var(--cond);letter-spacing:0.08em;text-transform:uppercase;">Last updated: February 28, 2026</p>
-      <div style="font-size:15px;color:rgba(255,255,255,0.55);line-height:1.8;">
-        <p style="margin-bottom:12px;"><strong style="color:rgba(255,255,255,0.75);">Acceptance.</strong> By accessing this website you accept and agree to be bound by these terms. If you do not agree, please do not use this site.</p>
-        <p style="margin-bottom:12px;"><strong style="color:rgba(255,255,255,0.75);">Intellectual Property.</strong> All content on this site — text, images, graphics, and design — is the property of J. Barbush and/or Cast Iron LA unless otherwise noted. Unauthorized use or reproduction is prohibited without written consent.</p>
-        <p style="margin-bottom:12px;"><strong style="color:rgba(255,255,255,0.75);">External Links.</strong> This site may contain links to external websites. We are not responsible for the content, privacy practices, or availability of those sites.</p>
-        <p style="margin-bottom:12px;"><strong style="color:rgba(255,255,255,0.75);">Limitation of Liability.</strong> This website is provided "as is" without warranties of any kind. J. Barbush shall not be liable for any damages arising from the use of this site.</p>
-        <p style="margin-bottom:12px;"><strong style="color:rgba(255,255,255,0.75);">Governing Law.</strong> These terms shall be governed by the laws of the State of California. Contact: <a href="mailto:j@castiron.la" style="color:var(--orange);">j@castiron.la</a></p>
-      </div>
-    </div>
-
   </div>
-</section>
+</div>
 
 <footer>
   <address style="font-style:normal;width:100%;">
@@ -1043,7 +1229,7 @@ h1             { animation: fu 0.5s ease both 0.2s; }
       <a href="#stage" class="footer-nav-link">AI Search</a>
       <a href="#writing" class="footer-nav-link">Writing</a>
       <a href="#contact" class="footer-nav-link">Contact</a>
-      <a href="#legal" class="footer-nav-link">Privacy &amp; Terms</a>
+      <a href="#" onclick="document.getElementById('legal-modal').style.display='block';return false;" class="footer-nav-link">Privacy &amp; Terms</a>
     </div>
     <p class="footer-left">
       J. Barbush &nbsp;·&nbsp; <a href="https://www.castiron.la" target="_blank" rel="noopener noreferrer">Cast Iron LA</a> &nbsp;·&nbsp; <a href="https://www.luisramirez.org" target="_blank" rel="noopener noreferrer">Luis Ramirez</a> &nbsp;·&nbsp; <a href="https://www.linkedin.com/in/jbarbush" target="_blank" rel="noopener noreferrer">LinkedIn</a> &nbsp;·&nbsp; <a href="https://jbarbush.medium.com" target="_blank" rel="noopener noreferrer">Medium</a> &nbsp;·&nbsp; Los Angeles, CA
@@ -1056,36 +1242,47 @@ h1             { animation: fu 0.5s ease both 0.2s; }
 <section id="bibliography" aria-label="Sources" style="display:none" aria-hidden="true">
   <ol itemscope itemtype="https://schema.org/ItemList">
     <li id="rpa-cannes-2014" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-      <span itemprop="name">RPA and Honda — Two Gold Cannes Lions, Project Drive-In</span>
+      <span itemprop="name">RPA and Honda, Two Gold Cannes Lions, Project Drive-In</span>
       <link itemprop="url" href="https://www.rpa.com/press/2014-06-25-rpa_two-gold-lions"/>
       <meta itemprop="description" content="J. Barbush and Luis Ramirez at RPA Advertising. Two Gold Cannes Lions for Honda Project Drive-In, 2014."/>
       <meta itemprop="datePublished" content="2014-06-25"/>
     </li>
     <li id="mediapost-founding" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-      <span itemprop="name">Agency Veterans Forge Cast Iron LA — MediaPost, December 2019</span>
+      <span itemprop="name">Agency Veterans Forge Cast Iron LA, MediaPost, December 2019</span>
       <link itemprop="url" href="https://www.mediapost.com/publications/article/344330/agency-veterans-forge-cast-iron-la.html"/>
       <meta itemprop="description" content="MediaPost coverage of Cast Iron LA founding by J. Barbush and Luis Ramirez. December 2019."/>
       <meta itemprop="datePublished" content="2019-12"/>
     </li>
     <li id="thinkla-2020" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-      <span itemprop="name">How Two 50-Year-Olds Created a Visionary Digital Marketing Agency — ThinkLA, 2020</span>
+      <span itemprop="name">How Two 50-Year-Olds Created a Visionary Digital Marketing Agency, ThinkLA, 2020</span>
       <link itemprop="url" href="https://www.thinkla.org/blog/how-two-50-year-olds-created-visionary-digital-marketing-agency-clients-love"/>
       <meta itemprop="description" content="ThinkLA profile of Cast Iron LA founders J. Barbush and Luis Ramirez. 2020."/>
       <meta itemprop="datePublished" content="2020-02"/>
     </li>
     <li id="ncg-stage-result" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-      <span itemprop="name">NCG Stage Intelligence Report — Cast Iron LA, 2025</span>
+      <span itemprop="name">NCG Stage Intelligence Report, Cast Iron LA, 2025</span>
       <link itemprop="url" href="https://www.castiron.la/portfolio/ncg-new-game-face"/>
       <meta itemprop="description" content="First Stage30 deployment. AI conversion rate lifted from 5.9% to 12.5% in 55 days. +112% AI CVR lift. Zero paid spend. No Compromise Gaming, 2025."/>
       <meta itemprop="datePublished" content="2025"/>
     </li>
     <li id="muckrack-author" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-      <span itemprop="name">J. Barbush — Verified Author Profile — Muckrack</span>
+      <span itemprop="name">J. Barbush, Verified Author Profile, Muckrack</span>
       <link itemprop="url" href="https://muckrack.com/j-barbush"/>
       <meta itemprop="description" content="Verified journalist profile. Publications include Adweek, Digiday, The Drum, Campaign US, VentureBeat, SmartBrief."/>
     </li>
   </ol>
 </section>
 
+
+<script>
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') {
+    document.getElementById('legal-modal').style.display = 'none';
+  }
+});
+document.getElementById('legal-modal').addEventListener('click', function(e) {
+  if (e.target === this) this.style.display = 'none';
+});
+</script>
 </body>
 </html>
