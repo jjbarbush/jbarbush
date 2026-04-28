@@ -51,6 +51,7 @@ Questions: j@castiron.la
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'G-N15GTJKQQM');
+      document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a');if(a&&/let.?s\s*talk/i.test((a.textContent||'').trim())){gtag('event','lets_talk_click',{link_url:a.getAttribute('href')||'',page_path:location.pathname});}});
     </script>
 <meta charset="UTF-8">
      <meta name="google-site-verification" content="ZK55NauYKvfUf5cSdRYZ8uEiacnAjYamIa-cTbnzmCg" />
