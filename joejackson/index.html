@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Joe Jackson Night — The Plan</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,800;1,600&family=Oswald:wght@400;500;600;700&family=Special+Elite&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #ECE3CE;
+    --ink: #20160F;
+    --oxblood: #6E1E1E;
+    --forest: #1F3D2B;
+    --gold: #B58B2A;
+    --gold-bright: #D4A93C;
+    --line: rgba(32,22,15,0.30);
+    --muted: rgba(32,22,15,0.62);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #14100B;
+    background-image: radial-gradient(circle at 50% 0%, rgba(181,139,42,0.08), transparent 60%);
+    color: var(--ink);
+    font-family: 'Oswald', sans-serif;
+    line-height: 1.5;
+    padding: 28px 16px 60px;
+    display: flex;
+    justify-content: center;
+  }
+  .bill {
+    width: 100%;
+    max-width: 580px;
+    background: var(--paper);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+    border: 2px solid var(--ink);
+    box-shadow: 0 0 0 1px var(--paper), 0 0 0 4px var(--ink), 0 30px 60px rgba(0,0,0,0.6);
+    position: relative;
+  }
+  .frame { border: 2px solid var(--gold); margin: 7px; }
+  .innerframe { border: 1px solid var(--line); margin: 5px; }
+
+  .header {
+    text-align: center;
+    padding: 26px 26px 22px;
+    border-bottom: 3px double var(--ink);
+    background: linear-gradient(rgba(110,30,30,0.04), rgba(110,30,30,0.04));
+  }
+  .toptag {
+    font-family: 'Special Elite', monospace;
+    font-size: 11px; letter-spacing: 4px; text-transform: uppercase; color: var(--oxblood);
+  }
+  .rule-orn { display: flex; align-items: center; justify-content: center; gap: 10px; margin: 10px 0; color: var(--gold); font-size: 13px; }
+  .rule-orn::before, .rule-orn::after { content: ""; height: 1px; width: 64px; background: var(--gold); }
+  .presents {
+    font-family: 'Playfair Display', serif; font-style: italic; font-weight: 600;
+    font-size: 17px; letter-spacing: 1px; color: var(--forest);
+  }
+  .header h1 {
+    font-family: 'Playfair Display', serif; font-weight: 800; font-size: 64px;
+    line-height: 0.9; letter-spacing: 1px; color: var(--oxblood);
+    text-shadow: 1px 1px 0 rgba(181,139,42,0.35); margin: 6px 0 2px;
+  }
+  .header .at { font-family: 'Playfair Display', serif; font-style: italic; font-size: 20px; color: var(--ink); }
+  .header .venue { font-family: 'Oswald', sans-serif; font-weight: 700; font-size: 26px; letter-spacing: 3px; text-transform: uppercase; margin-top: 6px; }
+  .header .date { font-family: 'Special Elite', monospace; font-size: 12px; letter-spacing: 3px; margin-top: 8px; color: var(--forest); }
+
+  .mission { background: var(--forest); color: var(--paper); text-align: center; padding: 14px 26px; border-bottom: 2px solid var(--ink); }
+  .mission b { font-family: 'Oswald', sans-serif; font-weight: 700; font-size: 20px; letter-spacing: 2px; text-transform: uppercase; }
+  .mission span { display: block; font-family: 'Special Elite', monospace; font-size: 11px; letter-spacing: 2px; opacity: 0.8; margin-top: 4px; }
+
+  .body { padding: 6px 26px 26px; }
+  .stop { display: flex; gap: 18px; padding: 20px 0; border-bottom: 1px solid var(--line); }
+  .stop:last-of-type { border-bottom: none; }
+  .time { flex: 0 0 70px; text-align: right; font-family: 'Oswald', sans-serif; font-weight: 700; font-size: 22px; color: var(--oxblood); line-height: 1; padding-top: 4px; }
+  .time small { display: block; font-family: 'Special Elite', monospace; font-size: 10px; color: var(--muted); font-weight: 400; letter-spacing: 1px; margin-top: 3px; }
+  .detail { flex: 1; border-left: 2px solid var(--gold); padding-left: 18px; }
+  .detail h2 { font-family: 'Playfair Display', serif; font-weight: 800; font-size: 30px; line-height: 1; color: var(--ink); }
+  .detail .addr { font-family: 'Special Elite', monospace; font-size: 12px; color: var(--muted); margin-top: 5px; }
+  .detail p { font-size: 15px; margin-top: 9px; color: rgba(32,22,15,0.85); }
+  .pills { margin-top: 12px; display: flex; flex-wrap: wrap; gap: 7px; }
+  .pill { font-family: 'Oswald', sans-serif; font-size: 11px; font-weight: 500; letter-spacing: 1px; text-transform: uppercase; border: 1px solid var(--ink); padding: 3px 10px; background: rgba(181,139,42,0.12); }
+  .price { font-family: 'Special Elite', monospace; font-size: 12px; margin-top: 12px; color: var(--ink); line-height: 1.7; }
+  .price b { color: var(--oxblood); }
+  .links { margin-top: 14px; display: flex; flex-wrap: wrap; gap: 9px; }
+  a.btn { display: inline-flex; align-items: center; gap: 6px; text-decoration: none; font-family: 'Oswald', sans-serif; font-weight: 600; font-size: 13px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--paper); background: var(--oxblood); padding: 8px 15px; border: 1.5px solid var(--ink); transition: all 0.15s ease; }
+  a.btn:hover { background: var(--ink); transform: translateY(-2px); }
+  a.btn.ghost { background: transparent; color: var(--ink); }
+  a.btn.ghost:hover { background: var(--gold); color: var(--ink); }
+
+  .walk { display: flex; align-items: center; gap: 16px; padding: 16px 0; border-bottom: 1px solid var(--line); background: repeating-linear-gradient(90deg, transparent 0 6px, rgba(32,22,15,0.04) 6px 12px); }
+  .walk-badge { flex: 0 0 70px; text-align: center; font-family: 'Oswald', sans-serif; font-weight: 700; font-size: 12px; letter-spacing: 1px; color: var(--forest); text-transform: uppercase; }
+  .walk-badge .foot { font-size: 18px; }
+  .walk-body { flex: 1; }
+  .walk-body .route { font-family: 'Special Elite', monospace; font-size: 12px; color: var(--muted); }
+  .walk-body .mins { font-family: 'Oswald', sans-serif; font-weight: 600; font-size: 17px; text-transform: uppercase; letter-spacing: 0.5px; }
+  .walk-body a.btn { margin-top: 6px; padding: 6px 13px; font-size: 12px; }
+
+  /* Fact panels */
+  .facts { padding: 6px 26px 24px; }
+  .factcard { border: 1px solid var(--ink); margin-top: 18px; background: rgba(181,139,42,0.07); }
+  .factcard .fc-head { background: var(--ink); color: var(--gold-bright); padding: 9px 16px; display: flex; justify-content: space-between; align-items: baseline; }
+  .factcard .fc-head h3 { font-family: 'Playfair Display', serif; font-weight: 800; font-size: 21px; color: var(--paper); }
+  .factcard .fc-head .sub { font-family: 'Special Elite', monospace; font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--gold-bright); }
+  .factcard ul { list-style: none; padding: 14px 18px; }
+  .factcard li { font-size: 14px; padding: 6px 0 6px 20px; position: relative; color: rgba(32,22,15,0.88); border-bottom: 1px dotted var(--line); }
+  .factcard li:last-child { border-bottom: none; }
+  .factcard li::before { content: "✦"; position: absolute; left: 0; color: var(--oxblood); font-size: 11px; top: 8px; }
+  .factcard li b { color: var(--oxblood); }
+  .factcard .fc-links { padding: 0 18px 16px; display: flex; flex-wrap: wrap; gap: 9px; }
+
+  .footstrip { background: var(--ink); color: var(--gold-bright); text-align: center; padding: 14px; font-family: 'Special Elite', monospace; font-size: 12px; letter-spacing: 4px; text-transform: uppercase; border-top: 3px double var(--gold); }
+  @media (max-width: 480px) {
+    .header h1 { font-size: 46px; }
+    .time, .walk-badge { flex-basis: 56px; }
+    .detail h2 { font-size: 25px; }
+  }
+</style>
+</head>
+<body>
+<div class="bill">
+<div class="frame">
+<div class="innerframe">
+
+  <div class="header">
+    <div class="toptag">✦ One Night Only ✦</div>
+    <div class="rule-orn">❧</div>
+    <div class="presents">Ass, Gas or Grass Presents</div>
+    <h1>Joe Jackson</h1>
+    <div class="at">live at the</div>
+    <div class="venue">Orpheum Theatre</div>
+    <div class="date">TUE · JUNE 2, 2026 · DOWNTOWN L.A.</div>
+  </div>
+
+  <div class="mission">
+    <b>The Real Event: Happy Hour Before 7</b>
+    <span>park once · wine · boilermakers · the show</span>
+  </div>
+
+  <div class="body">
+
+    <!-- PARK -->
+    <div class="stop">
+      <div class="time">5:45<small>PM</small></div>
+      <div class="detail">
+        <h2>Park Here</h2>
+        <div class="addr">Joe's Auto Parks · 826 S Broadway</div>
+        <p>Park once. Forget about the car.</p>
+        <div class="links">
+          <a class="btn" href="https://maps.google.com/?q=Joe's+Auto+Parks+826+S+Broadway+Los+Angeles" target="_blank">Directions →</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- WALK 1 -->
+    <div class="walk">
+      <div class="walk-badge"><div class="foot">⌐</div>WALK #1</div>
+      <div class="walk-body">
+        <div class="route">Broadway → 6th St → Spring St</div>
+        <div class="mins">6 min · Parking → Beelman's</div>
+        <a class="btn ghost" href="https://maps.google.com/?saddr=826+S+Broadway+Los+Angeles&daddr=600+S+Spring+St+Los+Angeles&dirflg=w" target="_blank">Walking route →</a>
+      </div>
+    </div>
+
+    <!-- HAPPY HOUR -->
+    <div class="stop">
+      <div class="time">6:00<small>PM</small></div>
+      <div class="detail">
+        <h2>Beelman's</h2>
+        <div class="addr">600 S Spring St · Happy Hour 4–7 PM</div>
+        <p>A neighborhood tavern built on craft beer and cocktails. Wine, boilermakers, bar food, and $15 burgers. Historic DTLA, short walk to the theater. Get here by 6 to make the most of it.</p>
+        <div class="pills">
+          <span class="pill">Wine</span>
+          <span class="pill">Boilermakers</span>
+          <span class="pill">Bar Food</span>
+          <span class="pill">$15 Burgers</span>
+        </div>
+        <div class="price">
+          Happy Hour: Wells <b>$6</b> · Wine by the glass <b>$7–8</b> · Boilermakers <b>$8</b> · Draft Lager <b>$5</b><br>
+          Bar food: Burger <b>$14.29</b> · Wings <b>$10.99</b> · Totchos <b>$10</b>
+        </div>
+        <div class="links">
+          <a class="btn" href="https://beelmansdtla.com/food-menu" target="_blank">Menu →</a>
+          <a class="btn ghost" href="https://beelmansdtla.com/drink-menu" target="_blank">Drinks →</a>
+          <a class="btn ghost" href="https://maps.google.com/?q=Beelman's+600+S+Spring+St+Los+Angeles" target="_blank">Map →</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- SETTLE UP -->
+    <div class="stop">
+      <div class="time">7:15<small>PM</small></div>
+      <div class="detail">
+        <h2>Settle Up</h2>
+        <p>Close the tab. Head to the show.</p>
+      </div>
+    </div>
+
+    <!-- WALK 2 -->
+    <div class="walk">
+      <div class="walk-badge"><div class="foot">⌐</div>WALK #2</div>
+      <div class="walk-body">
+        <div class="route">Spring → 8th → Broadway</div>
+        <div class="mins">5 min · Beelman's → Orpheum</div>
+        <a class="btn ghost" href="https://maps.google.com/?saddr=600+S+Spring+St+Los+Angeles&daddr=842+S+Broadway+Los+Angeles&dirflg=w" target="_blank">Walking route →</a>
+      </div>
+    </div>
+
+    <!-- INSIDE -->
+    <div class="stop">
+      <div class="time">7:25<small>PM</small></div>
+      <div class="detail">
+        <h2>Inside the Orpheum</h2>
+        <p>Bathroom. Drink. People watching.</p>
+      </div>
+    </div>
+
+    <!-- SHOW -->
+    <div class="stop">
+      <div class="time">8:00<small>PM</small></div>
+      <div class="detail">
+        <h2>Joe Jackson</h2>
+        <div class="addr">Orpheum Theatre · 842 S Broadway · 8:00 PM</div>
+        <div class="links">
+          <a class="btn" href="https://maps.google.com/?q=Orpheum+Theatre+842+S+Broadway+Los+Angeles" target="_blank">Directions →</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- FACTS -->
+  <div class="facts">
+
+    <div class="factcard">
+      <div class="fc-head"><h3>The Orpheum</h3><span>Est. 1926</span></div>
+      <ul>
+        <li>Opened <b>February 15, 1926</b> as the fourth and final L.A. home of the Orpheum vaudeville circuit. Named for Orpheus, the Greek god of music.</li>
+        <li>Beaux Arts facade, French-inspired interior with gilded ceilings, two huge chandeliers, and gold-leaf detailing. The most fully restored of the old Broadway movie palaces.</li>
+        <li>Home to a 1928 "Mighty Wurlitzer" pipe organ, one of only three left in Southern California and still played today.</li>
+        <li>Past stage: a young Judy Garland, the Marx Brothers, Jack Benny, Lena Horne, Ella Fitzgerald, Duke Ellington, and later Little Richard and Aretha Franklin.</li>
+      </ul>
+      <div class="fc-links"><a class="btn ghost" href="https://en.wikipedia.org/wiki/Orpheum_Theatre_(Los_Angeles)" target="_blank">More history →</a></div>
+    </div>
+
+    <div class="factcard">
+      <div class="fc-head"><h3>Joe Jackson</h3><span>Hope &amp; Fury Tour</span></div>
+      <ul>
+        <li>English singer-songwriter and pianist, breakout in 1979 with "Is She Really Going Out with Him?" Best known for "Steppin' Out" and a catalog that runs new wave, jazz, swing, and classical.</li>
+        <li>This stop supports his newest album, <b>"Hope and Fury,"</b> out now. Expect new material woven in with the classics.</li>
+        <li>Touring as Joe Jackson + Band. Recent setlists have included Steppin' Out, Real Men, Sunday Papers, Be My Number Two, and a cover of Bowie's "Scary Monsters."</li>
+        <li>Doors at 7 PM, show at <b>8 PM sharp</b>. He plays often, but L.A. shows are rare. Worth being in your seat on time.</li>
+      </ul>
+      <div class="fc-links"><a class="btn ghost" href="https://joejackson.com/" target="_blank">Official site →</a></div>
+    </div>
+
+  </div>
+
+  <div class="footstrip">✦ See Everyone There ✦</div>
+
+</div>
+</div>
+</div>
+</body>
+</html>
