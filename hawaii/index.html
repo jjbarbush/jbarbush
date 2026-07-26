@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kohala Coast: Calm Water Chart</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800;900&family=IBM+Plex+Mono:wght@400;500;600&family=Spectral:ital,wght@0,400;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --buff:#EFE7D4;
+  --buff2:#E5DAC1;
+  --shoal:#C7E2E2;
+  --deep:#17414F;
+  --deep2:#0D2A34;
+  --lava:#16191A;
+  --annot:#A81B5D;
+  --kiawe:#4E6B36;
+  --amber:#9A6410;
+  --rule:#B5A585;
+  --rule2:#CFC3A6;
+  --nav:60px;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:calc(var(--nav) + 54px)}
+body{
+  margin:0;background:var(--buff);color:var(--lava);
+  font-family:'Archivo',system-ui,sans-serif;font-size:16px;line-height:1.5;
+  background-image:
+    linear-gradient(0deg,rgba(23,65,79,.045) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(23,65,79,.045) 1px,transparent 1px);
+  background-size:26px 26px;
+}
+img{display:block;max-width:100%}
+.wrap{max-width:780px;margin:0 auto;padding:0 15px 90px}
+
+/* ---------- NAV ---------- */
+.nav{
+  position:sticky;top:0;z-index:60;background:var(--deep2);
+  border-bottom:2px solid var(--annot);
+}
+.nav-in{max-width:780px;margin:0 auto;display:flex;align-items:center;gap:12px;padding:0 15px;height:var(--nav)}
+.brand{
+  font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.16em;
+  color:var(--shoal);text-transform:uppercase;white-space:nowrap;line-height:1.3;
+}
+.brand b{display:block;color:#fff;font-family:'Archivo';font-weight:800;font-size:14px;letter-spacing:.02em}
+.nav-links{display:flex;gap:2px;margin-left:auto;overflow-x:auto;scrollbar-width:none}
+.nav-links::-webkit-scrollbar{display:none}
+.nav-links a{
+  font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.1em;
+  text-transform:uppercase;color:#8FB4BE;text-decoration:none;padding:9px 9px;
+  white-space:nowrap;border-bottom:2px solid transparent;
+}
+.nav-links a:hover{color:#fff}
+.nav-links a.active{color:#fff;border-bottom-color:var(--annot)}
+
+/* beach index strip */
+.index{
+  position:sticky;top:var(--nav);z-index:55;background:var(--buff2);
+  border-bottom:1px solid var(--rule);
+}
+.index-in{max-width:780px;margin:0 auto;display:flex;gap:6px;padding:9px 15px;overflow-x:auto;scrollbar-width:none}
+.index-in::-webkit-scrollbar{display:none}
+.index-in a{
+  font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.08em;
+  text-transform:uppercase;color:var(--deep);text-decoration:none;
+  border:1px solid var(--rule);padding:6px 9px;white-space:nowrap;background:var(--buff);
+}
+.index-in a:hover{background:var(--deep);color:var(--buff);border-color:var(--deep)}
+
+/* ---------- HERO ---------- */
+.hero{position:relative;margin:0 0 4px;overflow:hidden;background:var(--deep2);min-height:330px;display:flex;align-items:flex-end}
+.hero img{
+  position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
+  filter:saturate(1.05) contrast(1.03);
+}
+.hero:after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(13,42,52,.15) 0%,rgba(13,42,52,.55) 55%,rgba(13,42,52,.92) 100%);
+}
+.hero-in{position:relative;z-index:2;padding:26px 15px 22px;max-width:780px;margin:0 auto;width:100%}
+.eyebrow{
+  font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.24em;
+  text-transform:uppercase;color:var(--shoal);margin:0 0 9px;
+}
+h1{
+  font-size:clamp(38px,11.5vw,66px);line-height:.9;letter-spacing:-.03em;
+  font-weight:900;text-transform:uppercase;margin:0 0 12px;color:#fff;
+}
+h1 span{display:block;color:#FF7FB2}
+.standfirst{
+  font-family:'Spectral',Georgia,serif;font-style:italic;font-size:17px;
+  line-height:1.45;margin:0;color:#DDE9EC;max-width:36em;
+}
+.hero-basis{
+  background:var(--deep2);color:#BBD3D9;padding:13px 15px 15px;
+  font-family:'IBM Plex Mono',monospace;font-size:11px;line-height:1.85;letter-spacing:.03em;
+  border-bottom:2px solid var(--annot);
+}
+.hero-basis span{max-width:780px;margin:0 auto;display:block}
+.hero-basis b{color:#fff;font-weight:600}
+
+/* ---------- SECTIONS ---------- */
+h2{
+  font-size:13px;letter-spacing:.2em;text-transform:uppercase;font-weight:700;
+  color:var(--deep);margin:38px 0 13px;padding-bottom:7px;border-bottom:2px solid var(--deep);
+  display:flex;justify-content:space-between;align-items:baseline;gap:10px;
+}
+h2 em{font-family:'IBM Plex Mono',monospace;font-style:normal;font-size:10px;letter-spacing:.08em;color:var(--annot);font-weight:500;text-transform:none}
+
+/* conditions */
+.cond{border:1px solid var(--deep);background:rgba(199,226,226,.5);padding:14px}
+.cond-head{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:11px}
+.cond-head strong{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--deep)}
+button.refresh{
+  font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;
+  background:var(--deep);color:var(--buff);border:0;padding:9px 12px;cursor:pointer;
+}
+button.refresh:hover{background:var(--annot)}
+button.refresh:disabled{opacity:.5;cursor:wait}
+.cond-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--rule)}
+.cond-cell{background:var(--buff);padding:10px}
+.cond-cell span{display:block;font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:#5C6668;margin-bottom:3px}
+.cond-cell b{font-size:19px;font-weight:700;color:var(--deep2)}
+.cond-note{margin:11px 0 0;font-family:'Spectral',serif;font-style:italic;font-size:14.5px;line-height:1.45;color:#2A3538}
+.cond-stamp{font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.08em;color:#6C7476;margin-top:8px}
+
+/* key */
+.key{border:1px solid var(--rule);background:rgba(255,255,255,.4);padding:13px 14px}
+.key dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:9px 12px;align-items:start}
+.key dt{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.08em;color:var(--deep);white-space:nowrap;padding-top:2px}
+.key dd{margin:0;font-size:13.5px;line-height:1.4;color:#33403F}
+
+/* filters */
+.filters{display:flex;flex-wrap:wrap;gap:6px;margin:14px 0 2px}
+.chip{
+  font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;
+  padding:9px 12px;border:1px solid var(--deep);background:transparent;color:var(--deep);cursor:pointer;
+}
+.chip[aria-pressed="true"]{background:var(--deep);color:var(--buff)}
+
+/* ---------- CARDS ---------- */
+.card{border:1px solid var(--deep);background:var(--buff);margin:16px 0;overflow:hidden}
+.shot-wrap{position:relative;background:var(--deep2);aspect-ratio:16/9;border-bottom:1px solid var(--deep)}
+.shot{width:100%;height:100%;object-fit:cover}
+.shot-tag{
+  position:absolute;left:0;bottom:0;background:var(--deep2);color:var(--shoal);
+  font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.12em;
+  text-transform:uppercase;padding:5px 8px;
+}
+.shot-rank{
+  position:absolute;right:0;top:0;background:var(--annot);color:#fff;
+  font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.12em;padding:5px 9px;
+}
+.body{padding:15px 15px 16px}
+.stationline{display:flex;align-items:baseline;gap:9px;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.12em;color:var(--annot);margin-bottom:5px;text-transform:uppercase}
+.stationline i{font-style:normal;color:#6C7476}
+h3{font-size:27px;line-height:1.02;letter-spacing:-.025em;font-weight:900;margin:0;text-transform:uppercase;color:var(--deep2)}
+.haw{font-family:'Spectral',serif;font-style:italic;font-size:15px;color:var(--deep);margin:4px 0 0}
+.marks{display:flex;flex-wrap:wrap;gap:16px;margin:13px 0 11px;padding:10px 0;border-top:1px solid var(--rule2);border-bottom:1px solid var(--rule2)}
+.mark{display:flex;flex-direction:column;gap:5px}
+.mark span{font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.13em;text-transform:uppercase;color:#5C6668}
+.dots{display:flex;gap:3px}
+.dot{width:10px;height:10px;border-radius:50%;border:1.3px solid var(--deep)}
+.dot.on{background:var(--deep)}
+.verdict{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:11px}
+.tag{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.09em;text-transform:uppercase;padding:5px 8px;border:1px solid currentColor}
+.tag.easy{color:var(--kiawe)}
+.tag.fair{color:var(--amber)}
+.tag.hard{color:var(--annot)}
+.tag.cost{color:var(--deep)}
+.go{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.05em;color:var(--deep2);background:rgba(199,226,226,.6);padding:8px 10px;margin-bottom:11px;border-left:3px solid var(--annot)}
+.water{font-family:'Spectral',serif;font-style:italic;font-size:16px;line-height:1.5;margin:0 0 9px;color:#28343A}
+.land{font-size:14px;line-height:1.5;margin:0 0 13px;color:#3A4547}
+a.map{display:inline-block;font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--deep);text-decoration:none;border-bottom:2px solid var(--annot);padding-bottom:2px}
+a.map:hover{color:var(--annot)}
+
+/* attractions */
+.att{display:flex;gap:12px;border-top:1px solid var(--rule2);padding:14px 0;align-items:flex-start}
+.att:first-of-type{border-top:0}
+.att .thumb{flex:0 0 92px;width:92px;height:92px;background:var(--deep2);border:1px solid var(--deep);overflow:hidden}
+.att .thumb img{width:100%;height:100%;object-fit:cover}
+.att .txt{min-width:0}
+.att-head{display:flex;justify-content:space-between;align-items:baseline;gap:10px}
+.att-head h4{font-size:16px;margin:0;font-weight:800;letter-spacing:-.01em;text-transform:uppercase;line-height:1.15}
+.att-head .price{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.05em;color:var(--annot);white-space:nowrap;font-weight:500}
+.att .drive{font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:#6C7476;margin:4px 0 6px}
+.att p{margin:0;font-size:13.5px;line-height:1.5;color:#3A4547}
+
+/* notes */
+.notes{border:1px solid var(--deep);padding:15px}
+.notes ul{margin:0;padding-left:18px}
+.notes li{font-size:14.5px;line-height:1.55;margin-bottom:10px;color:#2E3A3C}
+.notes li:last-child{margin-bottom:0}
+.notes li b{font-weight:700;color:var(--deep2)}
+
+footer{margin-top:36px;padding-top:14px;border-top:2px solid var(--deep);font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.08em;line-height:1.9;color:#6C7476}
+
+.totop{
+  position:fixed;right:14px;bottom:14px;z-index:70;background:var(--deep2);color:#fff;
+  border:1px solid var(--annot);font-family:'IBM Plex Mono',monospace;font-size:10px;
+  letter-spacing:.1em;text-transform:uppercase;padding:11px 13px;cursor:pointer;
+  opacity:0;pointer-events:none;transition:opacity .25s ease;
+}
+.totop.show{opacity:1;pointer-events:auto}
+
+@media(min-width:620px){
+  .cond-grid{grid-template-columns:repeat(4,1fr)}
+  .marks{gap:24px}
+  .hero{min-height:400px}
+  .att .thumb{flex:0 0 128px;width:128px;height:110px}
+}
+@media(prefers-reduced-motion:no-preference){
+  .reveal{opacity:0;transform:translateY(14px);transition:opacity .5s ease,transform .5s ease}
+  .reveal.in{opacity:1;transform:none}
+  .card{transition:border-color .18s ease,box-shadow .18s ease}
+  .card:hover{border-color:var(--annot);box-shadow:4px 4px 0 rgba(168,27,93,.16)}
+}
+:focus-visible{outline:2.5px solid var(--annot);outline-offset:2px}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-in">
+    <div class="brand">South Kohala<b>Calm Water Chart</b></div>
+    <div class="nav-links" id="navLinks">
+      <a href="#today">Today</a>
+      <a href="#key">Key</a>
+      <a href="#beaches">Beaches</a>
+      <a href="#attractions">Attractions</a>
+      <a href="#notes">Notes</a>
+    </div>
+  </div>
+</nav>
+<div class="index"><div class="index-in" id="indexStrip"></div></div>
+
+<header class="hero">
+  <img id="heroImg" alt="Aerial view of the white sand and turquoise water of Hapuna Beach on the Kohala Coast">
+  <div class="hero-in">
+    <p class="eyebrow">Leeward Hawai&#699;i Island &middot; July</p>
+    <h1>Calm Water<span>Chart</span></h1>
+    <p class="standfirst">Nine places to get in the water within an easy drive of Waikoloa, ranked for flat water and reef, with the parking and fee reality before you leave the room.</p>
+  </div>
+</header>
+<div class="hero-basis"><span>
+  <b>BASE</b> Waikoloa Beach Resort<br>
+  <b>SEASON</b> Summer swell hits south-facing shores. This coast faces west.<br>
+  <b>RULE</b> Everything is calmest and clearest before 10 a.m. Trades build after 11.
+</span></div>
+
+<div class="wrap">
+
+<h2 id="today">Today on the water <em>live</em></h2>
+<div class="cond reveal">
+  <div class="cond-head">
+    <strong>Kohala Coast conditions</strong>
+    <button class="refresh" id="refreshBtn" type="button">Get today's reading</button>
+  </div>
+  <div class="cond-grid">
+    <div class="cond-cell"><span>Air high</span><b id="c-high">85&ndash;88&deg;</b></div>
+    <div class="cond-cell"><span>Water</span><b id="c-water">79&ndash;81&deg;</b></div>
+    <div class="cond-cell"><span>West shore surf</span><b id="c-surf">1&ndash;3 ft</b></div>
+    <div class="cond-cell"><span>Wind</span><b id="c-wind">NE 10&ndash;18</b></div>
+  </div>
+  <p class="cond-note" id="c-note">July baseline for this coast. Rain is close to zero and sun is the hazard. Tap the button for today's actual surf and wind, which is the number that decides whether H&#257;puna is glassy or a shore break.</p>
+  <p class="cond-stamp" id="c-stamp">SOURCE: SEASONAL AVERAGE. NOT YET REFRESHED.</p>
+</div>
+
+<h2 id="key">Key <em>how to read a card</em></h2>
+<div class="key reveal">
+  <dl>
+    <dt>CALM &#9679;&#9679;&#9679;&#9679;&#9679;</dt><dd>Five means pond flat most mornings. Three means you will feel the ocean.</dd>
+    <dt>REEF &#9679;&#9679;&#9679;&#9679;&#9679;</dt><dd>Snorkeling quality when the water is clear. Five is worth the drive on its own.</dd>
+    <dt>PARKING</dt><dd><b style="color:#4E6B36">EASY</b> park anytime. <b style="color:#9A6410">FAIR</b> gone by mid-morning. <b style="color:#A81B5D">HARD</b> be there early or do not bother.</dd>
+    <dt>COST</dt><dd>What a non-resident pays. State parks take card only. No cash anywhere.</dd>
+  </dl>
+</div>
+
+<h2 id="beaches">Beaches <em>nine stations, nearest first</em></h2>
+<div class="filters" id="filters">
+  <button class="chip" data-f="all" aria-pressed="true" type="button">All nine</button>
+  <button class="chip" data-f="calm" aria-pressed="false" type="button">Calmest</button>
+  <button class="chip" data-f="reef" aria-pressed="false" type="button">Best reef</button>
+  <button class="chip" data-f="easy" aria-pressed="false" type="button">Easy parking</button>
+  <button class="chip" data-f="free" aria-pressed="false" type="button">Free</button>
+</div>
+<main id="beachList"></main>
+
+<h2 id="attractions">Attractions <em>with what it actually costs</em></h2>
+<div id="attractionList"></div>
+
+<h2 id="notes">Before you go</h2>
+<div class="notes reveal">
+  <ul>
+    <li><b>Card only at every state park.</b> H&#257;puna and Waialea run on QR codes and card readers. There is nobody to take your cash.</li>
+    <li><b>Reef-safe sunscreen is state law.</b> Anything with oxybenzone or octinoxate is banned. Zinc, a rash guard, or long sleeves.</li>
+    <li><b>Ten feet from honu.</b> Green sea turtles are protected. Float still and let them come to you, and never get between one and the surface.</li>
+    <li><b>Morning is the whole game.</b> Trades pick up late morning, chop the surface, and drop visibility by half. A 7 a.m. snorkel and a 2 p.m. snorkel at the same beach are two different days.</li>
+    <li><b>Check the surf before H&#257;puna.</b> It is a sand beach with a real shore break when a swell is running. Waves over three feet mean stay out.</li>
+    <li><b>Gear.</b> Ocean Sports rents masks, fins, and paddleboards on A-Bay, which saves the drive to a Kona rental shop.</li>
+  </ul>
+</div>
+
+<footer>
+  BUILT 26 JULY 2026 &middot; FEES AND ACCESS CHECKED AGAINST HAWAI&#699;I DLNR STATE PARKS AND NPS<br>
+  PHOTOGRAPHY VIA WIKIMEDIA COMMONS &middot; PARKING AND PRICING CHANGE. THE GUARD AT THE GATE IS THE FINAL AUTHORITY.
+</footer>
+</div>
+
+<button class="totop" id="toTop" type="button">Top &uarr;</button>
+
+<script>
+/* if anything throws, make sure every panel is still visible and readable */
+window.addEventListener('error', function(){
+  document.querySelectorAll('.reveal').forEach(function(e){e.classList.add('in');});
+});
+
+/* ---------- self-healing image loader ---------- */
+function wm(f){return 'https://commons.wikimedia.org/wiki/Special:FilePath/'+encodeURIComponent(f)+'?width=1200';}
+function placeholder(label){
+  const s = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360">
+  <rect width="640" height="360" fill="#0D2A34"/>
+  <g fill="none" stroke="#2E6376" stroke-width="1.4">
+   <path d="M-20 300 Q160 250 320 285 T660 250"/><path d="M-20 250 Q160 200 320 235 T660 200"/>
+   <path d="M-20 200 Q160 150 320 185 T660 150"/><path d="M-20 150 Q160 100 320 135 T660 100"/>
+   <path d="M-20 100 Q160 50 320 85 T660 50"/></g>
+  <text x="24" y="330" fill="#7FA9B5" font-family="monospace" font-size="15" letter-spacing="3">${label}</text>
+  </svg>`;
+  return 'data:image/svg+xml;charset=utf-8,'+encodeURIComponent(s);
+}
+function attach(img, files, label){
+  let i = 0;
+  img.onerror = function(){
+    i++;
+    if(i < files.length){ img.src = wm(files[i]); }
+    else { img.onerror = null; img.src = placeholder(label); img.style.objectFit='cover'; }
+  };
+  img.src = wm(files[0]);
+}
+
+/* ---------- data ---------- */
+const beaches = [
+ {id:"abay", st:"S-01", name:"A-Bay", haw:"&#699;Anaeho&#699;omalu Bay", drive:"3 min", short:"A-Bay",
+  calm:5, reef:3, park:"easy", parkLabel:"Easy parking", cost:"Free", free:true, rank:"CLOSEST",
+  pics:["Anaehoomalu Bay Aerial.jpg","Aerial view of Anaeho'omalu Bay Beach.JPG","Anaehoomalu Bay.jpg"],
+  cap:"&#699;Anaeho&#699;omalu Bay from the air",
+  go:"GO 7&ndash;10 A.M. FOR TURTLES &middot; 5:45 P.M. FOR THE SUNSET",
+  water:"A long shallow crescent with almost no wave action, backed by ancient fishponds. The turtles work the lava shelf at the south end, past Lava Lava, and they are there most mornings.",
+  land:"Large free lot on Waikoloa Beach Drive. It fills between 10 and 3 but turns over fast. Snorkeling is honest rather than great: go left toward the rocks. Rentals, restrooms, and a bar on the sand.",
+  map:"https://maps.google.com/?q=Anaehoomalu+Bay+Beach+Park+Waikoloa"},
+
+ {id:"hapuna", st:"S-02", name:"H&#257;puna", haw:"H&#257;puna Beach State Recreation Area", drive:"15 min", short:"H&#257;puna",
+  calm:4, reef:3, park:"fair", parkLabel:"Fair parking", cost:"$10 car + $5 pp", free:false, rank:"BIGGEST",
+  pics:["Hapuna-beach-aerial.jpg","Hapuna beach (2349470336).jpg","Hapuna Beach (26172337253).jpg"],
+  cap:"H&#257;puna Beach State Recreation Area",
+  go:"GATES OPEN 7 A.M. &middot; BE PARKED BY 9 OR COME AFTER 3",
+  water:"Half a mile of white sand and the clearest water on the coast when it is calm. Snorkeling is only at the two rocky ends. In summer it is usually swimmable, but a swell turns the shorebreak serious.",
+  land:"Big state lot, $10 per vehicle plus $5 per person for non-residents, credit card only. Gates 7 a.m. to 7:30 p.m. Lifeguards, restrooms, showers, shade pavilions. No food, but the Westin is next door.",
+  map:"https://maps.google.com/?q=Hapuna+Beach+State+Recreation+Area"},
+
+ {id:"puako", st:"S-03", name:"Puak&#333;", haw:"Puak&#333; shoreline access", drive:"18 min", short:"Puak&#333;",
+  calm:3, reef:5, park:"easy", parkLabel:"Easy parking", cost:"Free", free:true, rank:"BEST CORAL",
+  pics:["BEACH NEAR PUAKO ON THE WESTERN SHORE, ONE OF THE FEW BEACHES ON THE ISLAND AVAILABLE TO THE PUBLIC - NARA - 554156.jpg","Puako Bay.jpg","Puako, Hawaii.jpg"],
+  cap:"The Puak&#333; shoreline",
+  go:"FLAT MORNINGS ONLY &middot; SKIP IT IF THERE IS ANY WHITE WATER",
+  water:"A long unbroken reef with the richest coral in South Kohala. There is no sand to speak of. You enter over rock and you should be a comfortable swimmer.",
+  land:"Marked public shoreline access lanes off Puako Beach Drive, free roadside parking. Bring booties. No lifeguards, no facilities. This is the reef people drive past H&#257;puna for.",
+  map:"https://maps.google.com/?q=Puako+Beach+Drive+shoreline+access+Hawaii"},
+
+ {id:"b69", st:"S-04", name:"Beach 69", haw:"Waialea Bay", drive:"20 min", short:"Beach 69",
+  calm:5, reef:5, park:"fair", parkLabel:"Fair parking", cost:"$10 car + $5 pp", free:false, rank:"TOP PICK",
+  pics:["Waialea Bay.jpg","Waialea Beach.jpg","Beach 69 Hawaii.jpg"],
+  cap:"Waialea Bay, a marine life conservation district",
+  go:"BEFORE 9 A.M. FOR VISIBILITY AND A SHADED SPOT",
+  water:"The best combination on this list. A protected bay that has been a Marine Life Conservation District since 1985, so the reef is intact. Best coral on the south side and around the rocky point at the north end.",
+  land:"Same state fee as H&#257;puna, $10 per vehicle plus $5 per person, card only. Kiawe trees give real shade, which is rare here. Quieter than H&#257;puna. Restrooms and showers on site.",
+  map:"https://maps.google.com/?q=Waialea+Bay+Beach+69+Hawaii"},
+
+ {id:"kaunaoa", st:"S-05", name:"Kauna&#699;oa", haw:"Mauna Kea Beach", drive:"20 min", short:"Kauna&#699;oa",
+  calm:5, reef:4, park:"hard", parkLabel:"Hard parking", cost:"Free beach, parking varies", free:true, rank:"MOST BEAUTIFUL",
+  pics:["Kaunaoa Beach.jpg","Kauna'oa Beach.jpg","Mauna Kea Beach Hotel.jpg","Mauna Kea Beach.jpg"],
+  cap:"Kauna&#699;oa Bay at the Mauna Kea Beach Hotel",
+  go:"AT THE GUARD GATE BY 7:45 A.M. PASSES ARE USUALLY GONE BY 9",
+  water:"A near-perfect crescent with water that stays calm when everything else is moving. Good snorkeling on both the north and south points, and manta rays come in past the hotel light after dark.",
+  land:"The beach is public, the parking is not. Stop at the Mauna Kea Beach Hotel gate and ask for a public beach parking pass. About 40 spots. Some visitors are charged around $20 at the lot, some are waved through, and the county has disputed the charge. Backup: park at H&#257;puna and walk the coastal trail a mile north.",
+  map:"https://maps.google.com/?q=Mauna+Kea+Beach+Hotel+public+beach+access"},
+
+ {id:"kiholo", st:"S-06", name:"K&#299;holo", haw:"K&#299;holo Bay", drive:"22 min", short:"K&#299;holo",
+  calm:4, reef:3, park:"fair", parkLabel:"Fair parking", cost:"Free", free:true, rank:"TURTLES",
+  pics:["Beach, Kiholo Bay, Hawaii (2408469226).jpg","Kiholo Bay.jpg","Kiholo Bay, Hawaii.jpg"],
+  cap:"K&#299;holo Bay",
+  go:"MORNING &middot; WEAR SOMETHING ON YOUR FEET",
+  water:"The most reliable turtle bay on this coast. Cold fresh water seeps in and mixes with the salt, so the surface looks blurry and oily. Swim through it and the visibility clears.",
+  land:"Free gravel lot off Highway 19, then a walk in. Rocky entry, no facilities, no lifeguard. Go for the turtles and the lava-and-palm landscape rather than the swimming.",
+  map:"https://maps.google.com/?q=Kiholo+Bay+Hawaii"},
+
+ {id:"spencer", st:"S-07", name:"Spencer", haw:"Samuel M. Spencer Beach Park", drive:"25 min", short:"Spencer",
+  calm:5, reef:3, park:"easy", parkLabel:"Easy parking", cost:"Free", free:true, rank:"FLATTEST WATER",
+  pics:["Spencer Beach Park.jpg","Samuel M. Spencer Beach Park.jpg","Spencer Beach.jpg"],
+  cap:"Spencer Beach Park, below Pu&#699;ukohol&#257; Heiau",
+  go:"ANY TIME &middot; AFTERNOON WIND CAN BLOW SAND",
+  water:"The most protected water on the coast. An offshore reef and the harbor breakwater kill the swell before it arrives, so this is close to a swimming pool. Snorkeling is modest and shallow, best on the left side.",
+  land:"Free county park with a large free lot, lifeguards, restrooms, showers, shade trees, and pavilions. Water can be slightly silty from Kawaihae Harbor to the north. Sits directly below Pu&#699;ukohol&#257; Heiau, so pair the two.",
+  map:"https://maps.google.com/?q=Samuel+M+Spencer+Beach+Park+Hawaii"},
+
+ {id:"kahaluu", st:"S-08", name:"Kahalu&#699;u", haw:"Kahalu&#699;u Beach Park", drive:"50 min", short:"Kahalu&#699;u",
+  calm:5, reef:5, park:"fair", parkLabel:"Fair parking", cost:"Free", free:true, rank:"EASIEST SNORKEL",
+  pics:["Kahaluu Beach Park.jpg","Kahaluu Bay.jpg","Kahalu'u Beach Park.jpg"],
+  cap:"Kahalu&#699;u Beach Park, Keauhou",
+  go:"BEFORE 9 A.M. THE SMALL LOT FILLS AND STAYS FULL",
+  water:"An old breakwater turns this into a warm shallow aquarium full of fish and turtles. You can stand up in most of it. This is the easiest genuinely good snorkel on the island.",
+  land:"Free small county lot in Keauhou that fills early. Lifeguards, restrooms, showers, and a reef education booth. Entry is over rock, so reef shoes help. Watch for a current at the north end near the channel.",
+  map:"https://maps.google.com/?q=Kahaluu+Beach+Park+Kona+Hawaii"},
+
+ {id:"twostep", st:"S-09", name:"Two Step", haw:"H&#333;naunau Bay", drive:"75 min", short:"Two Step",
+  calm:4, reef:5, park:"fair", parkLabel:"Fair parking", cost:"Free roadside or ~$10 lot", free:true, rank:"BEST SNORKEL",
+  pics:["Beach at Pu'uhonua O Hōnaunau National Historical Park, Big Island, Hawaii (40949966610).jpg","Honaunau Bay.jpg","Two Step Honaunau.jpg"],
+  cap:"H&#333;naunau Bay beside the place of refuge",
+  go:"7 A.M. THE BAY GOES CHOPPY AND CROWDED BY 10",
+  water:"The best shore snorkel on the Big Island. You step off a lava ledge in two natural steps into deep clear water over a coral wall. Dolphins pass through. There is no beach and no gradual entry.",
+  land:"Free roadside parking that fills fast, or a paid lot near the church for about $10 to $20. Portable toilets only. Next door to Pu&#699;uhonua o H&#333;naunau, so do the park and the snorkel in one morning.",
+  map:"https://maps.google.com/?q=Two+Step+Honaunau+Bay+Hawaii"}
+];
+
+const attractions = [
+ {n:"Waikoloa Petroglyph Preserve", d:"5 min &middot; walk from Kings' Shops", p:"Free",
+  pics:["Petroglyphs at Waikoloa.jpg","Waikoloa Petroglyph Preserve.jpg","Puako petroglyphs.jpg"],
+  t:"Hundreds of carvings in the lava on a short trail behind the shops. No shade at all, so go before 9 a.m. or after 4 p.m. Stay on the path and do not make rubbings."},
+ {n:"Pu&#699;ukohol&#257; Heiau", d:"25 min north &middot; Kawaihae", p:"Free",
+  pics:["Puukohola Heiau National Historic Site.jpg","Puukohola Heiau.jpg","Pu'ukohola Heiau NHS.jpg"],
+  t:"Kamehameha's war temple, finished in 1791, the platform where the island was unified. National Historic Site with a visitor center. Spencer Beach is directly below it."},
+ {n:"Polol&#363; Valley Lookout", d:"1 hr north &middot; end of Highway 270", p:"Free",
+  pics:["Pololu Valley.jpg","Pololu Valley Lookout.jpg","Pololu valley hawaii.jpg"],
+  t:"The drive through Hawi and Kapa&#699;au is half the reason to go. The lookout is a walk from the car. The trail to the black sand beach is 20 minutes down and considerably longer back up."},
+ {n:"Mauna Kea Visitor Station", d:"1 hr 20 min &middot; 9,200 ft", p:"Free",
+  pics:["Mauna Kea Observatories.jpg","Mauna Kea summit.jpg","Mauna Kea.jpg"],
+  t:"Stargazing from the visitor station needs no permit and no four-wheel drive. Bring real jackets, it gets near freezing. The summit road requires 4WD and a 30-minute stop at the station to acclimatize."},
+ {n:"Pu&#699;uhonua o H&#333;naunau", d:"1 hr 15 min south", p:"$20 / vehicle",
+  pics:["Puuhonua o Honaunau National Historical Park.jpg","Hale o Keawe.jpg","Puuhonua o Honaunau.jpg"],
+  t:"The place of refuge, with carved ki&#699;i, royal grounds, and the great wall. Pass is good for seven days and the station is cashless. Two Step is a two-minute walk from the lot."},
+ {n:"Manta ray night snorkel", d:"Departs Kona and Keauhou", p:"~$130&ndash;190 pp",
+  pics:["Manta birostris-Thailand.jpg","Manta ray night dive Kona.jpg","Reef manta ray.jpg"],
+  t:"Boat out at dusk, hold a lighted board, and the mantas feed on the plankton underneath you. Book ahead. Operators cancel on rough nights, so calm water matters."},
+ {n:"Hawai&#699;i Volcanoes National Park", d:"2 hr 30 min each way", p:"$30 / vehicle",
+  pics:["Halemaumau Crater.jpg","Kilauea Caldera.jpg","Hawaii Volcanoes National Park.jpg"],
+  t:"A full day, not an afternoon. Pass is good for seven days and the entrance station is cashless. Check the eruption status before committing to the drive."}
+];
+
+/* ---------- render ---------- */
+function dots(n){let h='<div class="dots">';for(let i=1;i<=5;i++)h+='<div class="dot'+(i<=n?' on':'')+'"></div>';return h+'</div>';}
+
+function renderBeaches(filter){
+  const el = document.getElementById('beachList');
+  let list = beaches.slice();
+  if(filter==='calm') list = list.filter(b=>b.calm>=5);
+  if(filter==='reef') list = list.filter(b=>b.reef>=5);
+  if(filter==='easy') list = list.filter(b=>b.park==='easy');
+  if(filter==='free') list = list.filter(b=>b.free);
+  if(!list.length){el.innerHTML='<p class="water">Nothing matches that filter. Tap All nine.</p>';return;}
+  el.innerHTML = list.map(b=>`
+   <article class="card reveal" id="${b.id}">
+     <div class="shot-wrap">
+       <img class="shot" data-pics="${b.id}" alt="${b.cap}" loading="lazy">
+       <div class="shot-rank">${b.rank}</div>
+       <div class="shot-tag">${b.cap}</div>
+     </div>
+     <div class="body">
+       <div class="stationline">${b.st}<i>${b.drive} from Waikoloa</i></div>
+       <h3>${b.name}</h3>
+       <p class="haw">${b.haw}</p>
+       <div class="marks">
+         <div class="mark"><span>Calm</span>${dots(b.calm)}</div>
+         <div class="mark"><span>Reef</span>${dots(b.reef)}</div>
+       </div>
+       <div class="verdict"><div class="tag ${b.park}">${b.parkLabel}</div><div class="tag cost">${b.cost}</div></div>
+       <div class="go">${b.go}</div>
+       <p class="water">${b.water}</p>
+       <p class="land">${b.land}</p>
+       <a class="map" href="${b.map}" target="_blank" rel="noopener">Open in maps &rarr;</a>
+     </div>
+   </article>`).join('');
+  list.forEach(b=>{
+    const img = el.querySelector('img[data-pics="'+b.id+'"]');
+    if(img) attach(img, b.pics, b.short.replace(/&[^;]+;/g,''));
+  });
+  observe();
+}
+
+function renderAttractions(){
+  const el = document.getElementById('attractionList');
+  el.innerHTML = attractions.map((a,i)=>`
+   <div class="att reveal">
+     <div class="thumb"><img data-att="${i}" alt="${a.n}" loading="lazy"></div>
+     <div class="txt">
+       <div class="att-head"><h4>${a.n}</h4><div class="price">${a.p}</div></div>
+       <div class="drive">${a.d}</div>
+       <p>${a.t}</p>
+     </div>
+   </div>`).join('');
+  attractions.forEach((a,i)=>{
+    const img = el.querySelector('img[data-att="'+i+'"]');
+    if(img) attach(img, a.pics, '');
+  });
+}
+
+/* index strip */
+document.getElementById('indexStrip').innerHTML =
+  beaches.map(b=>`<a href="#${b.id}">${b.short}</a>`).join('');
+
+/* filters */
+const chips = [...document.querySelectorAll('.chip')];
+chips.forEach(c=>c.addEventListener('click',()=>{
+  chips.forEach(x=>x.setAttribute('aria-pressed', x===c?'true':'false'));
+  renderBeaches(c.dataset.f);
+}));
+
+/* reveal on scroll (declared before any render call) */
+var io = null;
+function showAll(){document.querySelectorAll('.reveal').forEach(e=>e.classList.add('in'));}
+function observe(){
+  try{
+    if(!('IntersectionObserver' in window)){showAll();return;}
+    if(!io) io = new IntersectionObserver(function(es){
+      es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+    },{rootMargin:'0px 0px -8% 0px'});
+    document.querySelectorAll('.reveal:not(.in)').forEach(e=>io.observe(e));
+  }catch(err){ showAll(); }
+}
+
+/* hero */
+attach(document.getElementById('heroImg'),
+  ["Hapuna-beach-aerial.jpg","Anaehoomalu Bay Aerial.jpg","Hapuna beach (2349470336).jpg"], "KOHALA COAST");
+
+renderBeaches('all');
+renderAttractions();
+observe();
+
+/* nav highlight + back to top */
+const links = [...document.querySelectorAll('.nav-links a')];
+const sections = links.map(a=>document.querySelector(a.getAttribute('href'))).filter(Boolean);
+const toTop = document.getElementById('toTop');
+toTop.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+window.addEventListener('scroll',()=>{
+  toTop.classList.toggle('show', window.scrollY > 700);
+  let cur = null;
+  sections.forEach(s=>{ if(s.getBoundingClientRect().top <= 140) cur = s.id; });
+  links.forEach(a=>a.classList.toggle('active', a.getAttribute('href') === '#'+cur));
+},{passive:true});
+
+/* live conditions */
+const btn = document.getElementById('refreshBtn');
+btn.addEventListener('click', async ()=>{
+  btn.disabled = true; const old = btn.textContent; btn.textContent = 'Reading...';
+  document.getElementById('c-stamp').textContent = 'CHECKING NWS AND SURF REPORTS...';
+  try{
+    const res = await fetch("https://api.anthropic.com/v1/messages",{
+      method:"POST", headers:{"Content-Type":"application/json"},
+      body:JSON.stringify({
+        model:"claude-sonnet-4-6", max_tokens:1000,
+        tools:[{type:"web_search_20250305",name:"web_search"}],
+        messages:[{role:"user",content:"Search for today's National Weather Service forecast and surf forecast for the Kohala Coast and Waikoloa area on the Big Island of Hawaii. Then respond with ONLY a JSON object, no preamble and no markdown fences, with these exact keys: high (air temperature high, e.g. \"87 F\"), water (ocean temperature, e.g. \"80 F\"), surf (west-facing shore surf height, e.g. \"1-3 ft\"), wind (e.g. \"NE 12-20 mph\"), note (two sentences of plain advice for someone deciding whether to snorkel at Hapuna, Waialea or A-Bay today, mentioning any advisories), asof (today's date)."}]
+      })
+    });
+    const data = await res.json();
+    const text = (data.content||[]).filter(b=>b.type==='text').map(b=>b.text).join('\n');
+    const j = JSON.parse(text.replace(/```json|```/g,'').trim().match(/\{[\s\S]*\}/)[0]);
+    document.getElementById('c-high').textContent = j.high;
+    document.getElementById('c-water').textContent = j.water;
+    document.getElementById('c-surf').textContent = j.surf;
+    document.getElementById('c-wind').textContent = j.wind;
+    document.getElementById('c-note').textContent = j.note;
+    document.getElementById('c-stamp').textContent = ('SOURCE: LIVE FORECAST · AS OF '+(j.asof||'')).toUpperCase();
+  }catch(e){
+    document.getElementById('c-stamp').textContent = 'LIVE READING FAILED. THE JULY BASELINE ABOVE STILL HOLDS. CHECK FORECAST.WEATHER.GOV FOR WAIKOLOA.';
+  }
+  btn.disabled = false; btn.textContent = old;
+});
+</script>
+</body>
+</html>
